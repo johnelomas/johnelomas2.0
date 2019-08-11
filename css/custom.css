@@ -2,8 +2,16 @@ body {
 	background-color: lightblue;
 }
 
+footer {
+	background-color: #1BC0DA;
+}
+
 footer p {
 	padding-left: 1em;
+}
+
+nav {
+	background-color: #1BC0DA;
 }
 
 .page-title {
