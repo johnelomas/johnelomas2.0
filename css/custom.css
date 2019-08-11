@@ -1,0 +1,12 @@
+body {
+	background-color: lightblue;
+}
+
+footer p {
+	padding-left: 1em;
+}
+
+.page-title {
+	margin-bottom: 1em;
+	margin-top: 1em;
+}
