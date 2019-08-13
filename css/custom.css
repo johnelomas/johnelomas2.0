@@ -18,6 +18,10 @@ nav {
 	padding-top: 0.5em;
 }
 
+.dropdown-menu {
+	background-color: #1BC0DA;
+}
+
 .page-title {
 	margin-bottom: 1em;
 	margin-top: 1em;
