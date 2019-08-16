@@ -1,3 +1,13 @@
+article h3 {
+	margin-left: 0.5em;
+	margin-right: 1em;
+}
+
+article p {
+	margin-left: 1em;
+	margin-right: 1em;
+}
+
 body {
 	background-color: lightblue;
 }
@@ -18,8 +28,17 @@ nav {
 	background-color: #1BC0DA;
 }
 
+.img-thumbnail {
+	margin: 0.3em 1em 0em 1em;
+}
+
 .page-title {
 	margin-bottom: 1em;
 	margin-top: 1em;
+}
+
+.profile {
+	height: 24em;
+	width: 20em;
 }
 
