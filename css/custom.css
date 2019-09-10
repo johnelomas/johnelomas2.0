@@ -30,6 +30,7 @@ nav {
 
 .dropdown-menu {
 	background-color: #1BC0DA;
+	list-style-type: none;
 }
 
 .img-thumbnail {
