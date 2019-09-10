@@ -8,6 +8,10 @@ article p {
 	margin-right: 3em;
 }
 
+aside.card {
+	height: 39em;
+}
+
 body {
 	background-color: lightblue;
 }
@@ -45,6 +49,5 @@ nav {
 .profile {
 	height: 24em;
 	width: 18em;
-	margin-right
 }
 
