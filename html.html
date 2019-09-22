@@ -125,13 +125,91 @@
 			<p>
 				HTML is a way of marking up a page in a way which the browser can understand. The 
 				markup consists of tags denoted by left and right arrows around defined words. Tags
-				come in pairs; a start tag and an end tag. Here is a general 
-				example. 
-				<pre>
-					<code class="text-center">&lt;TagName&gt;Start tag to the left. End Tag to the right.&lt;/TagName&gt;</code>
-				</pre>
+				generally come in pairs; a start tag and an end tag. Code 1 shows the minimal
+				markup to form a web page.
+			</p>
+			<figure class="figure">
+				<pre class="border border-primary rounded-lg"><code>
+	&lt;!DOCTYPE html&gt;
+	&lt;html&gt;
+		&lt;head&gt;
+			&lt;meta charset="utf-8"&gt;
+			&lt;title&gt;Web Page Minimum&lt;/title&gt;		
+		&lt;/head&gt;
+		&lt;body&gt;	
+		&lt;/body&gt;
+	&lt;/html&gt;
+				</code></pre>
+			<figcaption class="figure-caption text-left">Code 1: Minimal code for a web page.</figcaption>
+			</figure>
+			<p>
+				So, what is happening here? And, didn't I say the tags come in pairs? What is the 
+				extra stuff in the meta tag? These are all goood questions. Let's explore.
 			</p>
 			<p>
+				The first line is not an HTML tag. Rather, this line is a statemet to the browser
+				identifying the type of document. The most recent version of HTML is 5 and the
+				doctype value is simple html. The doctype values are much wordier in earlier versions
+				of HTML. There is also a variant XHTML type of HTML. XHTML is not in the itenerary 
+				for this tour, and we will only be exploring the current version. Just be aware
+				you may see older HTML in your future travels, and some things you may do 
+				differently in today's HTML than in older HTML.
+			</p>
+			<p>
+				Next up is the html tag. The starting tag is on the second line. The ending tag is
+				on the last line. The difference between the two tags is the forward slash in the
+				ending tag just before the tag name of HTML. You may wonder why we have to declare
+				a HTML tag. After all, we are creating a HTML document. Well, we can also include
+				JavaScript in our HTML and we mark the JavaScript part of the file with a 
+				&lt;script&gt; tag. We will explore JavaScript in a future segment of our tour. 
+				For now, all we need to know is we need to put our HTML code inside of 
+				&lt;html&gt; tags.
+			</p>
+			<p>
+				The first thing to appear inside the &lt;html&gt; tag is the &lt;head&gt; tag. This 
+				section allows us to describe the web page. We still have not got to a point where
+				we would code what we see on a web page, but we are getting there.
+			</p>
+			<p>
+				The &lt;meta&gt; tag is the firt stop in the &lt;head&gt; tag. Meta offers 
+				descriptions about web page. There can be multiple &lt;meta&gt; tags each of
+				which provide a different type of information. The example here includes an 
+				attribute called charset and we set the value to utf-8. 
+			</p>
+			<p>The charset states the character set in use for the web page. The character set 
+				assigns a number to each character or symbol you see on screen. There are a 
+				few different character sets including the familiar 
+				<abbr title="American Standard Code for Information Interchange">ASCII</abbr>.
+			</p>
+			<p>
+				Every html element (tag) can have an attribute. Attributes provide additional
+				information about the element. There are some attributes common to all
+				elements, and other attributes specific to other elements. In all cases, 
+				we provide the attribute name and set it equal to a value in quotes. We will
+				explore more attributes as we continue our tour.
+			</p>
+			<p>
+				The title element provides a title for the web page. Hover over the tab for this 
+				page in your browser. You will see the text "A Learning Journey in Software
+				Development." You will also see this same text if you hover over the icon
+				for your browser. This value appears because it is the title value in the
+				HTML for this web page.
+			</p>
+			<p>
+				Finally, we arrive at the body element. The body is where we insert the HTML
+				code to display on the web page and which will be visible when you view it.
+				Note there is nothing inside the body tags. What do you think will appear
+				if we view this code in a browser? If you guessed nothing, you are correct.
+				You will see a blank screen because we have not said what to show. Try it out.
+			</p>
+			<p>
+				Type the code in Code 1 into your text editor and save the file using the name
+				basic.html in a folder. If you do not want to type the code yourself,
+				feel free to download it from my GitHub repository. 
+				It is important for the file name to have a html
+				extension. So, make sure your file name ends in html. Go to the folder
+				containing basic.html and double-click the file. The file should launch
+				in your web browser.
 			</p>
 			</article>
 		</main>

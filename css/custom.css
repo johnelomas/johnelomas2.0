@@ -16,6 +16,10 @@ body {
 	background-color: lightblue;
 }
 
+figure {
+	padding-left: 3rem;
+}
+
 footer {
 	background-color: #1BC0DA;
 }
@@ -26,6 +30,10 @@ footer p {
 
 nav {
 	background-color: #1BC0DA;
+}
+
+pre {
+	background-color: white;
 }
 
 .carousel_img {
