@@ -311,7 +311,87 @@
 			<figure>
 				<img src="./images/commonhtml.png" alt="Browser showing common tags">
 				<figcaption class="figure-caption text-left">Figure 2: Browser view of Code 3.</figcaption>
-			</figure>			
+			</figure>
+			<p>
+				All the exciting stuff happens within the body element. Despite this statement,
+				the very first thing we encounter within the body tags in Code 3 is not 
+				that exciting at all, at least from a visual perspective. 				
+			</p>
+			<p>
+				The first item is a comment. Comments are important to remind yourself and to
+				tell others infomation about the code and explain why you did something
+				the way you did. The comments are only visible in the HTML code and never
+				appear on screen. Although comments are not necessary, they are helpful.
+				All comments start with and &lt;!-- tag and end with a --> tag. The format
+				is different than other tags we have seen, and, yes, we do need both dashes
+				at the start and end. Your actual comments go in the middle. Comments can 
+				run for mutiple lines. Just put the start tag where your comments begin 
+				and the end tag where your comments end. You could use the comment tags
+				to comment out HTML code as well. Maybe you have some HTML which you want
+				to keep in the file, but not show right now. Place comment tags around the
+				HTML and the browser will ignore the code until you remove the comment tags.
+			</p>
+			<p>
+				As we look further down the code, we see several div elements. These div 
+				elements are divisions, or sections, where we can group related things together.
+				Again, the div element is non-visual. You might want to have a div element
+				to contain fields to show address information, or another to contain a list
+				of places where you have worked and thier locations.
+			</p>
+			<p>
+				The first div element we see contains six header tags noted by h1, h2, h3,
+				h4, h5, h6. There are only six header tags. Header tags are an example of where
+				the tag has a noticeable effect on what we see. The h1 tag, like the masthead
+				on a newspaper, is the biggest. The h6 tag is the smallest. The bigger the 
+				header, the more prevalence is related to the information within it. Keep this
+				fact in mind as search engines will rate the information near a h1 tag as more 
+				important than informaton in a h2 tag, and so on down to the h6 tag.
+			</p>
+			<p>
+				We enounter the p tag next. Think of the p tag as a paragraph. We can include 
+				paragraphs and text within the p element.
+			</p>
+			<p>
+				The anchor tag is next. Here we use a for anchor. The anchor tag contains
+				a href attribute. This attribute only applies to a select few tags. The href
+				attribute puts the hyper in HyperText Markup Language by serving as a launching
+				point to go to another web page or document. The text between the starting and
+				ending tag also has special formatting to indicate it is a link: different 
+				color for the different text, underlined text, text color change if you have
+				not clicked a link or if you have clicked the link. In our example, cliking 
+				anywhere on the "take me to Google" text will load the Google home page
+				into the browser. Changing the value of the href attribute changes where
+				you will go. Try subsituting other web site address to experiment.
+			</p>
+			<p>
+				Our next div element bring us to the img tag. There are a couple of special 
+				notes here. First, notice there is a starting img (for image) tag but no
+				ending tag. I did not make a mistake. The img tag does not have an ending
+				tag. We could include one, but it is necessary and might even present
+				a problem in some browsers if you do. The basic reason for no ending tag is
+				that the img tag shows only images, no text. Since there is no text, there 
+				is no reason to indicate where text will end.
+			</p>
+			<p>
+				The next thing to notice about the img tag is the src (for source) attribute.
+				This attribute says what the sourc of the image is. In other words, the src
+				is where would the page find the image file. In our example, we can find the
+				image at "./brownrect.png". The ./ means the image is in the same folder as
+				our HTML file. The remainder is the name of the file. We are using an image
+				of type file type png here, but we could use other image types as well including:
+				gif and jpeg file types.
+			</p>
+			<p>
+				The final thing to notice about our img tag is the alt (for alternate) 
+				attribute. This attribute contains a short description of the image. If
+				the image file was missing or was unavailable to the browser, a small x
+				would appear on the screen. The value of the alt attribute would appear next
+				to the x and explain what the user would normally see there. Some text
+				explanation is better than a wierd x symbol appearing. Also, the value of the
+				alt attribute is helpful to visually impaired users who visit your web page.
+				These users could be using the screen reader accessibility tool and this tool
+				will use the alt value to tell your visitor what is there.
+			</p>
 			</article>
 		</main>
 		
