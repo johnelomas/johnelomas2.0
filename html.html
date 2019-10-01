@@ -91,54 +91,89 @@
 	</nav>
 
 		<section class="container">
-			<article>
 			<h1 class="text-center page-title">Tour of Web Fundamentals &mdash; HTML</h1>
-			<h3 class="text-center">Good to Know</h3>
-			<p>
-				<abbr title="Hyper-Text Markup Language">HTML</abbr>, Hyper-Text 
-				Markup Language, is the foundation of any web page. Any language
-				is an agreed upon standard of symbols in a set format to convey meaning.
-				The <a href="https://www.w3.org">World Wide Web Consortium</a> maintains 
-				the standards for HTML, CSS, and other web communication technologies.
-				In short, HTML is a standardized way of defining the contents of a web page.
-			</p>
-			<h3 class="text-center">Get Ready</h3>
-			<p>
-				There are only two things we need before starting: a text editor to create
-				a web page and a web browser to view it. A good free text editor is Notepad++. 
-				A popular browser is Google Chrome. I will be using both of these tools for 
-				our tour, but feel free to use your own favorite tools. 
-			</p>
-			<p>
-				<em>Notepad++:</em> You can download the proper version for your device at the 
-				<a href="https://notepad-plus-plus.org/downloads/">Download page</a>. 
-				Just run the setup program accepting all the defaults.
-			</p>
-			<p>
-				<em>Chrome:</em> Click "Download Chrome" on the 
-				<a href="https://www.google.com/chrome/?brand=CHBD&gclid=EAIaIQobChMIgbecvN7b5AIV0MDACh0DpAQWEAAYASABEgJT6PD_BwE&gclsrc=aw.ds">
-				Download page</a> to automatically download and install.
-			</p>
-			<p>
-				This tour will show code examples. These examples have a caption like: Code 1 with
-				some descriptive text and a file name in parentheses. You can copy the examples
-				from this web page and paste into a new file in your text editor, type the same 
-				code yourself into your text editor as it appears in the examples, or copy the 
-				indicated files in the captions from <a href="https://github.com/johnelomas/johnelomas_examples/tree/master/WebFundamentals/HTML">My Code Examples Code Repository.</a>
-				Feel free to use any method. It is important for the file name to have a html
-				extension. So, make sure your file name ends in html. Go to your folder
-				containing the html file and double-click the file. The file should launch
-				in your web browser.
-			</p>
-			<h3 class="text-center">Let's Get Going</h3>
-			<p>
-				HTML is a way of marking up a page in a way which the browser can understand. The 
-				markup consists of tags denoted by left and right arrows around defined words. Tags
-				come in pairs generally; a start tag and an end tag. Code 1 shows the minimal
-				markup to form a web page.
-			</p>
-			<figure class="figure">
-				<pre class="border border-primary rounded-lg"><code>
+			<article class="accordion" id="htmlArticle">
+				<section class="card border border-primary rounded-lg">
+					<div class="card-header" id="goodHeader">
+						<h3 class="mb-0">
+							<button class="btn btn-link text-center btn-block" type="button" data-toggle="collapse" data-target="#collapseGood" aria-expanded="true" aria-controls="collapseGood">
+								Good to Know
+							</button>
+						</h3>
+					</div>
+					<div id="collapseGood" class="collapse show" aria-labelledby="goodHeader" data-parent="#htmlArticle">
+						<div class="card-body"> 
+							<p>
+								<abbr title="Hyper-Text Markup Language">HTML</abbr>, Hyper-Text 
+								Markup Language, is the foundation of any web page. Any language
+								is an agreed upon standard of symbols in a set format to convey meaning.
+								The <a href="https://www.w3.org">World Wide Web Consortium</a> maintains 
+								the standards for HTML, CSS, and other web communication technologies.
+								In short, HTML is a standardized way of defining the contents of a web page.
+							</p>
+						</div>
+					</div>
+				</section>
+				
+				<section class="card border border-primary rounded-lg">
+					<div class="card-header" id="readyHeader">
+						<h3 class="mb-0">
+							<button class="btn btn-link text-center btn-block" type="button" data-toggle="collapse" data-target="#collapseReady" aria-expanded="false" aria-controls="collapseReady">
+								Get Ready
+							</button>
+						</h3>
+					</div>
+					<div id="collapseReady" class="collapse" aria-labelledby="readyHeader" data-parent="#htmlArticle">
+						<div class="card-body"> 
+							<p>
+								There are only two things we need before starting: a text editor to create
+								a web page and a web browser to view it. A good free text editor is Notepad++. 
+								A popular browser is Google Chrome. I will be using both of these tools for 
+								our tour, but feel free to use your own favorite tools. 
+							</p>
+							<p>
+								<em>Notepad++:</em> You can download the proper version for your device at the 
+								<a href="https://notepad-plus-plus.org/downloads/">Download page</a>. 
+								Just run the setup program accepting all the defaults.
+							</p>
+							<p>
+								<em>Chrome:</em> Click "Download Chrome" on the 
+								<a href="https://www.google.com/chrome/?brand=CHBD&gclid=EAIaIQobChMIgbecvN7b5AIV0MDACh0DpAQWEAAYASABEgJT6PD_BwE&gclsrc=aw.ds">
+								Download page</a> to automatically download and install.
+							</p>
+							<p>
+								This tour will show code examples. These examples have a caption like: Code 1 with
+								some descriptive text and a file name in parentheses. You can copy the examples
+								from this web page and paste into a new file in your text editor, type the same 
+								code yourself into your text editor as it appears in the examples, or copy the 
+								indicated files in the captions from <a href="https://github.com/johnelomas/johnelomas_examples/tree/master/WebFundamentals/HTML">My Code Examples Code Repository.</a>
+								Feel free to use any method. It is important for the file name to have a html
+								extension. So, make sure your file name ends in html. Go to your folder
+								containing the html file and double-click the file. The file should launch
+								in your web browser.
+							</p>							
+						</div>
+					</div>
+				</section>				
+				
+				<section class="card border border-primary rounded-lg">
+					<div class="card-header" id="goingHeader">
+						<h3 class="mb-0">
+							<button class="btn btn-link text-center btn-block" type="button" data-toggle="collapse" data-target="#collapseGoing" aria-expanded="false" aria-controls="collapseGoing">
+								Let's Get Going
+							</button>
+						</h3>
+					</div>
+					<div id="collapseGoing" class="collapse" aria-labelledby="goingHeader" data-parent="#htmlArticle">
+						<div class="card-body"> 
+							<p>
+								HTML is a way of marking up a page in a way which the browser can understand. The 
+								markup consists of tags denoted by left and right arrows around defined words. Tags
+								come in pairs generally; a start tag and an end tag. Code 1 shows the minimal
+								markup to form a web page.
+							</p>
+							<figure class="img-fluid figure">
+								<pre class="border border-primary rounded-lg"><code>
 	&lt;!DOCTYPE html&gt;
 	&lt;html&gt;
 		&lt;head&gt;
@@ -151,73 +186,86 @@
 				</code></pre>
 			<figcaption class="figure-caption text-left">Code 1: Minimal code for a web page (basic.html).</figcaption>
 			</figure>
-			<p>
-				So, what is happening here? And, didn't I say the tags come in pairs? What is the 
-				extra stuff in the meta tag? These are all good questions. Let's explore.
-			</p>
-			<p>
-				The first line is not an HTML tag. Rather, this line is a statement to the browser
-				identifying the type of document. The most recent version of HTML is 5 and the
-				doctype value is simple html. The doctype values are much wordier in earlier versions
-				of HTML. There is also a variant XHTML type of HTML. XHTML is not in the itinerary 
-				for this tour, and we will only be exploring the current version. Just be aware
-				you may see older HTML in your future travels, and some things you may do 
-				differently in today's HTML than in older HTML.
-			</p>
-			<p>
-				Next up is the html tag. The starting tag is on the second line. The ending tag is
-				on the last line. The difference between the two tags is the forward slash in the
-				ending tag just before the tag name of HTML. You may wonder why we declare 
-				a HTML tag. After all, we are creating a HTML document. Well, we can also include
-				JavaScript in our HTML and we mark the JavaScript part of the file with a 
-				&lt;script&gt; tag. We will explore JavaScript in a future segment of our tour. 
-				For now, all we need to know is we need to put our HTML code inside of 
-				&lt;html&gt; tags.
-			</p>
-			<p>
-				The first thing to appear inside the &lt;html&gt; tag is the &lt;head&gt; tag. This 
-				section allows us to describe the web page. We still have not got to a point where
-				we would code what we see on a web page, but we are getting there.
-			</p>
-			<p>
-				The &lt;meta&gt; tag is the firt stop in the &lt;head&gt; tag. Meta offers 
-				descriptions about web page. There can be multiple &lt;meta&gt; tags each of
-				which provide a different type of information. The example here includes an 
-				attribute called charset and we set the value to utf-8. 
-			</p>
-			<p>The charset states the character set in use for the web page. The character set 
-				assigns a number to each character or symbol you see on screen. There are a 
-				few different character sets including the familiar 
-				<abbr title="American Standard Code for Information Interchange">ASCII</abbr>.
-			</p>
-			<p>
-				Every html element (tag) can have an attribute. Attributes provide additional
-				information about the element. There are some attributes common to all
-				elements, and other attributes specific to other elements. In all cases, 
-				we provide the attribute name and set it equal to a value in quotes. We will
-				explore more attributes as we continue our tour.
-			</p>
-			<p>
-				The title element provides a title for the web page. Hover over the tab for this 
-				page in your browser. You will see the text "A Learning Journey in Software
-				Development." You will also see this same text if you hover over the icon
-				for your browser. This value appears because it is the title value in the
-				HTML for this web page.
-			</p>
-			<p>
-				Finally, we arrive at the body element. The body is where we insert the HTML
-				code to display on the web page and which will be visible when you view it.
-				Note there is nothing inside the body tags. What do you think will appear
-				if we view this code in a browser? If you guessed nothing, you are correct.
-				You will see a blank screen because we have not said what to show. Try it out.
-			</p>
-			<h3 class="text-center">Next Stop, Hello World</h3>
-			<p>
-				The obligatory first stop in a tour of any new language is getting 
-				it to say "Hello World" to you. This small milestone means you have
-				everything set up correctly.
-			</p>
-			<p>
+							<p>
+								So, what is happening here? And, didn't I say the tags come in pairs? What is the 
+								extra stuff in the meta tag? These are all good questions. Let's explore.
+							</p>
+							<p>
+								The first line is not an HTML tag. Rather, this line is a statement to the browser
+								identifying the type of document. The most recent version of HTML is 5 and the
+								doctype value is simple html. The doctype values are much wordier in earlier versions
+								of HTML. There is also a variant XHTML type of HTML. XHTML is not in the itinerary 
+								for this tour, and we will only be exploring the current version. Just be aware
+								you may see older HTML in your future travels, and some things you may do 
+								differently in today's HTML than in older HTML.
+							</p>
+							<p>
+								Next up is the html tag. The starting tag is on the second line. The ending tag is
+								on the last line. The difference between the two tags is the forward slash in the
+								ending tag just before the tag name of HTML. You may wonder why we declare 
+								a HTML tag. After all, we are creating a HTML document. Well, we can also include
+								JavaScript in our HTML and we mark the JavaScript part of the file with a 
+								&lt;script&gt; tag. We will explore JavaScript in a future segment of our tour. 
+								For now, all we need to know is we need to put our HTML code inside of 
+								&lt;html&gt; tags.
+							</p>
+							<p>
+								The first thing to appear inside the &lt;html&gt; tag is the &lt;head&gt; tag. This 
+								section allows us to describe the web page. We still have not got to a point where
+								we would code what we see on a web page, but we are getting there.
+							</p>
+							<p>
+								The &lt;meta&gt; tag is the firt stop in the &lt;head&gt; tag. Meta offers 
+								descriptions about web page. There can be multiple &lt;meta&gt; tags each of
+								which provide a different type of information. The example here includes an 
+								attribute called charset and we set the value to utf-8. 
+							</p>
+							<p>The charset states the character set in use for the web page. The character set 
+								assigns a number to each character or symbol you see on screen. There are a 
+								few different character sets including the familiar 
+								<abbr title="American Standard Code for Information Interchange">ASCII</abbr>.
+							</p>
+							<p>
+								Every html element (tag) can have an attribute. Attributes provide additional
+								information about the element. There are some attributes common to all
+								elements, and other attributes specific to other elements. In all cases, 
+								we provide the attribute name and set it equal to a value in quotes. We will
+								explore more attributes as we continue our tour.
+							</p>
+							<p>
+								The title element provides a title for the web page. Hover over the tab for this 
+								page in your browser. You will see the text "A Learning Journey in Software
+								Development." You will also see this same text if you hover over the icon
+								for your browser. This value appears because it is the title value in the
+								HTML for this web page.
+							</p>
+							<p>
+								Finally, we arrive at the body element. The body is where we insert the HTML
+								code to display on the web page and which will be visible when you view it.
+								Note there is nothing inside the body tags. What do you think will appear
+								if we view this code in a browser? If you guessed nothing, you are correct.
+								You will see a blank screen because we have not said what to show. Try it out.
+							</p>
+						</div>
+					</div>
+				</section>	
+
+				<section class="card border border-primary rounded-lg">
+					<div class="card-header" id="worldHeader">
+						<h3 class="mb-0">
+							<button class="btn btn-link text-center btn-block" type="button" data-toggle="collapse" data-target="#collapseWorld" aria-expanded="false" aria-controls="collapseWorld">
+								Next Stop, Hello World
+							</button>
+						</h3>
+					</div>
+					<div id="collapseWorld" class="collapse" aria-labelledby="worldHeader" data-parent="#htmlArticle">
+						<div class="card-body">
+							<p>
+								The obligatory first stop in a tour of any new language is getting 
+								it to say "Hello World" to you. This small milestone means you have
+								everything set up correctly.
+							</p>
+							<p>
 				Remember that I said the page contents go in the body element. Start by
 				making a copy of our previous basic.html file and save the file with 
 				hello.html as the file name. Between the start and end tags of the body
@@ -226,7 +274,7 @@
 				browser. If your browser view looks like Figure 1, then you have succeeded 
 				in creating your first web page.
 			</p>
-			<figure class="figure">
+			<figure class="img-fluid figure">
 				<pre class="border border-primary rounded-lg"><code>
 	&lt;!DOCTYPE html&gt;
 	&lt;html&gt;
@@ -238,21 +286,34 @@
 			Hello World
 		&lt;/body&gt;
 	&lt;/html&gt;
-				</code></pre>
-			<figcaption class="figure-caption text-left">Code 2: Hello World (hello.html).</figcaption>
-			</figure>
-			<figure class="figure">
-				<img class=" border border-primary rounded-lg"
-				src="./images/helloworld.png" alt="Browser showing Hello World">
-				<figcaption class="figure-caption text-left">Figure 1: Hello World in Browser.</figcaption>
-			</figure>
-			<h3 class="text-center">Let's See Some Common HTML Tags</h3>
-			<p>
-				Code 3 shows some commonly used tags. Figure 2 shows how this code 
-				appears in a browser.
-			</p>
-			<figure class="figure">
-				<pre class="border border-primary rounded-lg"><code>
+							</code></pre>
+						<figcaption class="figure-caption text-left">Code 2: Hello World (hello.html).</figcaption>
+						</figure>
+						<figure class="figure">
+							<img class="img-fluid border border-primary rounded-lg"
+							src="./images/helloworld.png" alt="Browser showing Hello World">
+							<figcaption class="figure-caption text-left">Figure 1: Hello World in Browser.</figcaption>
+						</figure>
+						</div>
+					</div>
+				</section>			
+			
+				<section class="card border border-primary rounded-lg">
+					<div class="card-header" id="seeHeader">
+						<h3 class="mb-0">
+							<button class="btn btn-link text-center btn-block" type="button" data-toggle="collapse" data-target="#collapseSee" aria-expanded="false" aria-controls="collapseSee">
+								See Common HTML Tags
+							</button>
+						</h3>
+					</div>
+					<div id="collapseSee" class="collapse" aria-labelledby="seeHeader" data-parent="#htmlArticle">
+						<div class="card-body">			
+							<p>
+								Code 3 shows some commonly used tags. Figure 2 shows how this code 
+								appears in a browser.
+							</p>
+							<figure class="figure img-fluid">
+								<pre class="border border-primary rounded-lg"><code>
 	&lt;!DOCTYPE html&gt;
 	&lt;html&gt;
 		&lt;head&gt;
@@ -299,132 +360,145 @@
 			&lt;/div&gt;		
 		&lt;/body&gt;
 	&lt;/html&gt;
-				</code></pre>
-			<figcaption class="figure-caption text-left">
-				Code 3: Common Tags (common.html and brownrect.png).
-			</figcaption>
-			</figure>
-			<figure class="figure">
-				<img class=" border border-primary rounded-lg"
-				src="./images/commonhtml.png" alt="Browser showing common tags">
-				<figcaption class="figure-caption text-left">Figure 2: Browser view of Code 3.</figcaption>
-			</figure>
-			<p>
-				All the exciting stuff happens within the body element. Despite this statement,
-				the very first thing we encounter within the body tags in Code 3 is not 
-				that exciting at all, at least from a visual perspective. 				
-			</p>
-			<p>
-				The first item is a comment. Comments are important to remind yourself and to
-				tell others information about the code and explain why you did something
-				the way you did. The comments are only visible in the HTML code and never
-				appear on screen. Although comments are not necessary, they are helpful.
-				All comments start with a &lt;!-- tag and end with a --> tag. The format
-				is different than other tags we have seen, and, yes, we do need both dashes
-				at the start and end. Your actual comments go in the middle. Comments can 
-				run for multiple lines. Just put the start tag where your comments begin 
-				and the end tag where your comments end. You could use the comment tags
-				to comment out HTML code as well. Maybe you have some HTML which you want
-				to keep in the file, but not show right now. Place comment tags around the
-				HTML and the browser will ignore the code until you remove the comment tags.
-			</p>
-			<p>
-				As we look further down the code, we see several div elements. These div 
-				elements are divisions, or sections, where we can group related things together.
-				Again, the div element is non-visual. You might want to have a div element
-				to contain fields to show address information, or another to contain a list
-				of places where you have worked and their locations.
-			</p>
-			<p>
-				The first div element we see contains six header tags noted by h1, h2, h3,
-				h4, h5, h6. There are only six header tags. Header tags are an example of where
-				the tag has a noticeable effect on what we see. The h1 tag, like the masthead
-				on a newspaper, is the biggest. The h6 tag is the smallest. The bigger the 
-				header, the more prevalence is related to the information within it. Keep this
-				fact in mind as search engines will rate the information near a h1 tag as more 
-				important than information in a h2 tag, and so on down to the h6 tag.
-			</p>
-			<p>
-				We encounter the p tag next. Think of the p tag as a paragraph. We can include 
-				paragraphs and text within the p element.
-			</p>
-			<p>
-				The anchor tag is next. Here we use a for anchor. The anchor tag contains
-				a href attribute. This attribute only applies to a select few tags. The href
-				attribute puts the hyper in HyperText Markup Language by serving as a launching
-				point to go to another web page or document. The text between the starting and
-				ending tag also has special formatting to indicate it is a link: different 
-				color for the different text, underlined text, text color change if you have
-				not clicked a link or if you have clicked the link. In our example, clicking 
-				anywhere on the "take me to Google" text will load the Google home page
-				into the browser. Changing the value of the href attribute changes where
-				you will go. Try substituting other web site address to experiment.
-			</p>
-			<p>
-				Our next div element bring us to the img tag. There are a couple of special 
-				notes here. First, notice there is a starting img (for image) tag but no
-				ending tag. I did not make a mistake. The img tag does not have an ending
-				tag. We could include one, but it is necessary and might even present
-				a problem in some browsers if you do. The basic reason for no ending tag is
-				that the img tag shows only images, no text. Since there is no text, there 
-				is no reason to indicate where text will end.
-			</p>
-			<p>
-				The next thing to notice about the img tag is the src (for source) attribute.
-				This attribute says what the source of the image is. In other words, the src
-				is where would the page find the image file. In our example, we can find the
-				image at "./brownrect.png". The ./ means the image is in the same folder as
-				our HTML file. The remainder is the name of the file. We are using an image
-				of type file type png here, but we could use other image types as well including:
-				gif and jpeg file types.
-			</p>
-			<p>
-				The final thing to notice about our img tag is the alt (for alternate) 
-				attribute. This attribute contains a short description of the image. This
-				alternative text shows if the image file was missing or was unavailable to 
-				the browser, a small x would appear on the screen. The value of the alt 
-				attribute would appear next to the x and explain what the user would normally 
-				see there. Some text explanation is better than a weird x symbol appearing. 
-				Also, the value of the alt attribute is helpful to visually impaired users who visit your web page. These users could be using the screen reader accessibility tool and this tool will use the alt value to tell your visitor what is there.
-			</p>
-			<p>
-				The final two div elements contain lists: an unordered list (ul tag), and an
-				ordered list (ol tag). Both lists contain list items (li tag). The default
-				marker for each list item in an unordered list is a black bullet. The default
-				marker for each list item in an unordered list is a number starting with 1. 
-				There are attributes to change these default values, but we can explore
-				these options at another time.
-			</p>
-			<h3 class="text-center">See HTML Tags With Meaning</h3>
-			<p>
-				One of the goals of HTML5 is to make web pages more semantic, or, more 
-				simply, more meaningful. The visitor to your web page may not notice or care, 
-				but more meaningful tags will help the internet be easier to rate 
-				information on a page and to find related information across the entire web. 
-			</p>
-			<p>
-				Think of a daily newspaper. There is the front-page main banner at the top of
-				the page. There is an index of where to find certain topics such as weather, 
-				comics, obituaries, letters to the editor, and more. There are several articles.
-				Some articles may have some ancillary information like a short biography 
-				of the reporter, or information about the article's topic which provides
-				background about the subject not necessarily related to the main topic of 
-				the article. At the bottom of the page, there may be a copyright and 
-				information about the newspaper publisher. Some of these items would repeat
-				for each section (national news, local news, sports, living) of the paper.
-			</p>
-			<p>
-				Using the markup we have visited so far, we would probably create a div element for the banner, another for index, a div for each article, ancillary information, and publisher. We might even nest the div elements where there would be a div
-				element for each section of the paper. This technique would not really give 
-				a good understanding of how these div elements relate to one another, and 
-				would be difficult to find what is important to you. HTML5 introduces some new 
-				tags to help with organize these relationships.
-			</p>
-			<figure class="figure">
-				<img class=" border border-primary rounded-lg" src="./images/html5.png" alt="HTML5 tag example">
-				<figcaption class="figure-caption text-left">Figure 3: Some HTML5 tags.</figcaption>
-			</figure>
-			<p>
+								</code></pre>
+							<figcaption class="figure-caption text-left">
+								Code 3: Common Tags (common.html and brownrect.png).
+							</figcaption>
+							</figure>
+							<figure class="figure">
+								<img class="img-fluid border border-primary rounded-lg"
+								src="./images/commonhtml.png" alt="Browser showing common tags">
+								<figcaption class="figure-caption text-left">Figure 2: Browser view of Code 3.</figcaption>
+							</figure>
+							<p>
+								All the exciting stuff happens within the body element. Despite this statement,
+								the very first thing we encounter within the body tags in Code 3 is not 
+								that exciting at all, at least from a visual perspective. 				
+							</p>
+							<p>
+								The first item is a comment. Comments are important to remind yourself and to
+								tell others information about the code and explain why you did something
+								the way you did. The comments are only visible in the HTML code and never
+								appear on screen. Although comments are not necessary, they are helpful.
+								All comments start with a &lt;!-- tag and end with a --> tag. The format
+								is different than other tags we have seen, and, yes, we do need both dashes
+								at the start and end. Your actual comments go in the middle. Comments can 
+								run for multiple lines. Just put the start tag where your comments begin 
+								and the end tag where your comments end. You could use the comment tags
+								to comment out HTML code as well. Maybe you have some HTML which you want
+								to keep in the file, but not show right now. Place comment tags around the
+								HTML and the browser will ignore the code until you remove the comment tags.
+							</p>
+							<p>
+								As we look further down the code, we see several div elements. These div 
+								elements are divisions, or sections, where we can group related things together.
+								Again, the div element is non-visual. You might want to have a div element
+								to contain fields to show address information, or another to contain a list
+								of places where you have worked and their locations.
+							</p>
+							<p>
+								The first div element we see contains six header tags noted by h1, h2, h3,
+								h4, h5, h6. There are only six header tags. Header tags are an example of where
+								the tag has a noticeable effect on what we see. The h1 tag, like the masthead
+								on a newspaper, is the biggest. The h6 tag is the smallest. The bigger the 
+								header, the more prevalence is related to the information within it. Keep this
+								fact in mind as search engines will rate the information near a h1 tag as more 
+								important than information in a h2 tag, and so on down to the h6 tag.
+							</p>
+							<p>
+								We encounter the p tag next. Think of the p tag as a paragraph. We can include 
+								paragraphs and text within the p element.
+							</p>
+							<p>
+								The anchor tag is next. Here we use a for anchor. The anchor tag contains
+								a href attribute. This attribute only applies to a select few tags. The href
+								attribute puts the hyper in HyperText Markup Language by serving as a launching
+								point to go to another web page or document. The text between the starting and
+								ending tag also has special formatting to indicate it is a link: different 
+								color for the different text, underlined text, text color change if you have
+								not clicked a link or if you have clicked the link. In our example, clicking 
+								anywhere on the "take me to Google" text will load the Google home page
+								into the browser. Changing the value of the href attribute changes where
+								you will go. Try substituting other web site address to experiment.
+							</p>
+							<p>
+								Our next div element bring us to the img tag. There are a couple of special 
+								notes here. First, notice there is a starting img (for image) tag but no
+								ending tag. I did not make a mistake. The img tag does not have an ending
+								tag. We could include one, but it is necessary and might even present
+								a problem in some browsers if you do. The basic reason for no ending tag is
+								that the img tag shows only images, no text. Since there is no text, there 
+								is no reason to indicate where text will end.
+							</p>
+							<p>
+								The next thing to notice about the img tag is the src (for source) attribute.
+								This attribute says what the source of the image is. In other words, the src
+								is where would the page find the image file. In our example, we can find the
+								image at "./brownrect.png". The ./ means the image is in the same folder as
+								our HTML file. The remainder is the name of the file. We are using an image
+								of type file type png here, but we could use other image types as well including:
+								gif and jpeg file types.
+							</p>
+							<p>
+								The final thing to notice about our img tag is the alt (for alternate) 
+								attribute. This attribute contains a short description of the image. This
+								alternative text shows if the image file was missing or was unavailable to 
+								the browser, a small x would appear on the screen. The value of the alt 
+								attribute would appear next to the x and explain what the user would normally 
+								see there. Some text explanation is better than a weird x symbol appearing. 
+								Also, the value of the alt attribute is helpful to visually impaired users who visit your web page. These users could be using the screen reader accessibility tool and this tool will use the alt value to tell your visitor what is there.
+							</p>
+							<p>
+								The final two div elements contain lists: an unordered list (ul tag), and an
+								ordered list (ol tag). Both lists contain list items (li tag). The default
+								marker for each list item in an unordered list is a black bullet. The default
+								marker for each list item in an unordered list is a number starting with 1. 
+								There are attributes to change these default values, but we can explore
+								these options at another time.
+							</p>
+						</div>
+					</div>
+				</section>
+
+				<section class="card border border-primary rounded-lg">
+					<div class="card-header" id="meaningHeader">
+						<h3 class="mb-0">
+							<button class="btn btn-link text-center btn-block" type="button" data-toggle="collapse" data-target="#collapseMeaning" aria-expanded="false" aria-controls="collapseMeaning">
+								See Meaningful HTML Tags
+							</button>
+						</h3>
+					</div>
+					<div id="collapseMeaning" class="collapse" aria-labelledby="meaningHeader" data-parent="#htmlArticle">
+						<div class="card-body">					
+							<p>
+								One of the goals of HTML5 is to make web pages more semantic, or, more 
+								simply, more meaningful. The visitor to your web page may not notice or care, 
+								but more meaningful tags will help the internet be easier to rate 
+								information on a page and to find related information across the entire web. 
+							</p>
+							<p>
+								Think of a daily newspaper. There is the front-page main banner at the top of
+								the page. There is an index of where to find certain topics such as weather, 
+								comics, obituaries, letters to the editor, and more. There are several articles.
+								Some articles may have some ancillary information like a short biography 
+								of the reporter, or information about the article's topic which provides
+								background about the subject not necessarily related to the main topic of 
+								the article. At the bottom of the page, there may be a copyright and 
+								information about the newspaper publisher. Some of these items would repeat
+								for each section (national news, local news, sports, living) of the paper.
+							</p>
+							<p>
+								Using the markup we have visited so far, we would probably create a div element for the banner, another for index, a div for each article, ancillary information, and publisher. We might even nest the div elements where there would be a div
+								element for each section of the paper. This technique would not really give 
+								a good understanding of how these div elements relate to one another, and 
+								would be difficult to find what is important to you. HTML5 introduces some new 
+								tags to help with organize these relationships.
+							</p>
+							<figure class="figure">
+								<img class="img-fluid border border-primary rounded-lg" src="./images/html5.png" alt="HTML5 tag example">
+								<figcaption class="figure-caption text-left">Figure 3: Some HTML5 tags.</figcaption>
+							</figure>
+							<p>
 				Figure 3 shows the relationship between some of the new tags in HTML5.
 				This example could be a prototype of Page One of our previous newspaper.
 				The header tag would be the banner, or mast head. The nav (for navigation)
@@ -438,42 +512,58 @@
 				article in the section. As you can see, these tags describe the
 				relationship between each other better than using div and p tags.
 			</p>
-			<h3 class="text-center">What Next?</h3>
-			<p>
-				We have seen a lot in this tour and experienced a good general feel
-				of building a web page. Unfortunately, we were not able to cover everything. 
-				I hope you have seen enough and want to learn more. If so, then I recommend 
-				the following sources to explore more.
-			</p>
-			<ul>
-				<li>
-					<a href="https://www.w3.org/TR/html51/">W3C</a> lists the official 
-					HTML standards and is the official word on how to implement and use
-					HTML.
-				</li>
-				<li>
-					<a href="https://htmlreference.io/">HTML Reference</a> lists all
-					HTML tags and how to use them. Each tag lists applicable attributes,
-					and gives examples of use.
-				</li>
-				<li>
-					<a href="https://www.w3schools.com/tags/default.asp">W3 Schools</a> 
-					lists HTML tags. A benefit here is the Try It functionality which
-					lets you modify the examples and see the result of the change. 
-					Although there is some disagreement on W3 Schools being true to 
-					official standards, I find the Try It examples helpful in providing
-					immediate feedback when you are learning something new.
-				</li>
-			</ul>
-			<p>
-				I think one thing you might have noticed is that the HTML is plain and 
-				not pleasantly arranged. Further, the web pages are not responsive to 
-				user interaction. For a look at how to style your HTML, please take the 
-				<a href="./css.html">CSS Tour.</a> For more about page interaction, please 
-				take the <a href="./js.html">JavaScript Tour.</a>
-			</p>
-			
+						</div>
+					</div>
+				</section>	
+
+				<section class="card border border-primary rounded-lg">
+					<div class="card-header" id="nextHeader">
+						<h3 class="mb-0">
+							<button class="btn btn-link text-center btn-block" type="button" data-toggle="collapse" data-target="#collapseNext" aria-expanded="false" aria-controls="collapseNext">
+								What Next?
+							</button>
+						</h3>
+					</div>
+					<div id="collapseNext" class="collapse" aria-labelledby="nextHeader" data-parent="#htmlArticle">
+						<div class="card-body">					
+							<p>
+								We have seen a lot in this tour and experienced a good general feel
+								of building a web page. Unfortunately, we were not able to cover everything. 
+								I hope you have seen enough and want to learn more. If so, then I recommend 
+								the following sources to explore more.
+							</p>
+							<ul>
+								<li>
+									<a href="https://www.w3.org/TR/html51/">W3C</a> lists the official 
+									HTML standards and is the official word on how to implement and use
+									HTML.
+								</li>
+								<li>
+									<a href="https://htmlreference.io/">HTML Reference</a> lists all
+									HTML tags and how to use them. Each tag lists applicable attributes,
+									and gives examples of use.
+								</li>
+								<li>
+									<a href="https://www.w3schools.com/tags/default.asp">W3 Schools</a> 
+									lists HTML tags. A benefit here is the Try It functionality which
+									lets you modify the examples and see the result of the change. 
+									Although there is some disagreement on W3 Schools being true to 
+									official standards, I find the Try It examples helpful in providing
+									immediate feedback when you are learning something new.
+								</li>
+							</ul>
+							<p>
+								I think one thing you might have noticed is that the HTML is plain and 
+								not pleasantly arranged. Further, the web pages are not responsive to 
+								user interaction. For a look at how to style your HTML, please take the 
+								<a href="./css.html">CSS Tour.</a> For more about page interaction, please 
+								take the <a href="./js.html">JavaScript Tour.</a>
+							</p>
+						</div>
+					</div>
+				</section>
 			</article>
+			<section id="bottom"></section>
 		</section>
 		
 		<!-- The push section is to force the sticky footer. Add NO CONTENT beyond or in this section. -->

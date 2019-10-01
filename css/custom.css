@@ -36,6 +36,22 @@ pre {
 	background-color: white;
 }
 
+.btn-link {
+	color: black;
+	font-size: 1.75rem;
+    font-weight: 500;	
+    line-height: 1.2;
+	margin-bottom: 0.5rem;
+}
+
+.card-body {
+	background-color: lightblue;
+}
+
+.card-header {
+	background-color: #1BC0DA;
+}
+
 .carousel_img {
 	height: 10rem;
 }
@@ -57,5 +73,9 @@ pre {
 .profile {
 	height: 24em;
 	width: 18em;
+}
+
+#bottom {
+	margin-bottom: 2rem;
 }
 
