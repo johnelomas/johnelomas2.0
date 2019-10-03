@@ -61,10 +61,6 @@ pre {
 	list-style-type: none;
 }
 
-#dust {
-	width: 25rem;
-}
-
 .img-thumbnail {
 	margin: 0.3em 1em 0em 1em;
 }
@@ -81,5 +77,9 @@ pre {
 
 #bottom {
 	margin-bottom: 2rem;
+}
+
+#dust {
+	width: 25rem;
 }
 
