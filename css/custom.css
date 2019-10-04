@@ -44,7 +44,7 @@ pre {
 	margin-bottom: 0.5rem;
 }
 
-.card-body {
+.card-body.page-card-content {
 	background-color: lightblue;
 }
 
