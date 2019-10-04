@@ -56,6 +56,10 @@ pre {
 	height: 10rem;
 }
 
+.date-modification {
+	font-size: 0.8rem;
+}
+
 .dropdown-menu {
 	background-color: #1BC0DA;
 	list-style-type: none;
