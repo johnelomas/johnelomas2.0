@@ -29,3 +29,32 @@ $( document ).ready( function () {
         return false;
     } );
 } );
+
+// Next 6 are for sticky footer
+document.createElement('header');
+document.createElement('footer');
+document.createElement('section');
+document.createElement('article');
+document.createElement('aside');
+document.createElement('nav');
+
+function addNewBadge() {
+	var newItems = document.querySelectorAll("[data-modified-date]");
+	var today = new Date();
+	
+	if (newItems.length > 0) {
+		for(let i = 0; i < newItems.length; i++) {
+			let itemDate = Date.parse(newItems[i].getAttribute("data-modified-date"));
+			let seconds = Math.abs(today - itemDate) / 1000;
+			let days = Math.floor(seconds / (60 * 60 * 24));			
+			if (days <= 30) {doAddNewBadge(newItems[i]);}
+		}
+	}
+}
+
+function doAddNewBadge(nodeSource) {
+	var newElement = document.createElement("span");
+	newElement.innerHTML = "NEW";
+	newElement.className += "badge badge-success";
+	nodeSource.appendChild(newElement);;
+}
