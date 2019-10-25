@@ -95,18 +95,126 @@
 			</ul>
 		</div>
 	</nav>
-
-		<h1 class="text-center page-title">Tour of Web Fundamentals &mdash; CSS</h1>
 		
 		<section class="container">	
-			<div class="row">
-			<figure class="figure mx-auto">
-				<img id="dust" class="img-fluid border border-primary rounded-lg" src="./images/dust.jpg"
-					alt="Pardon our dust while we refurbish.">
-				<figcaption class="figure-caption text-left">Image is proprietary to 
-					The Walt Disney Company. Please visit <a href="https://www.disney.com/">Disney.</a></figcaption>
-			</figure>
-			</div>
+			<h1 class="text-center page-title">Tour of Web Fundamentals &mdash; CSS</h1>
+			<article class="accordion" id="cssArticle">
+				<section class="card border border-primary rounded-lg">
+					<div class="card-header" id="goodHeader">
+						<h3 class="mb-0">
+							<button class="btn btn-link text-center btn-block" type="button" data-toggle="collapse" data-target="#collapseGood" aria-expanded="true" aria-controls="collapseGood">
+								Good to Know
+							</button>
+						</h3>
+					</div>
+					<div id="collapseGood" class="collapse show" aria-labelledby="goodHeader" data-parent="#cssArticle">
+						<div class="card-body page-card-content"> 
+							<p>	
+								This tour builds on what we saw during our tour of HTML. Be sure to revisit that tour before
+								continuing here. <a href="./html.html">Our tour of HTML</a> showed examples of web pages. One 
+								of the things you may have noticed is the pages looked plain. There was no attractive layout, 
+								use of color, or customization of default HTML behavior. We need to add style to our 
+								web pages. <abbr title="Cascading Style Sheets">CSS</abbr>, Cascading Style Sheets, is 
+								the way we give a web page a polished look from arrangement and color to responsive display
+								across a variety of devices.
+							</p>
+							<p>
+								The <a href="https://www.w3.org" target="_blank">World Wide Web Consortium</a> maintains 
+								the standards for HTML, CSS, and other web communication technologies.
+								In short, CSS is a standardized way of styling the contents of a web page.
+							</p>
+						</div>
+					</div>
+				</section>
+				
+				<section class="card border border-primary rounded-lg">
+					<div class="card-header" id="readyHeader">
+						<h3 class="mb-0">
+							<button class="btn btn-link text-center btn-block" type="button" data-toggle="collapse" data-target="#collapseReady" aria-expanded="false" aria-controls="collapseReady">
+								Get Ready
+							</button>
+						</h3>
+					</div>
+					<div id="collapseReady" class="collapse" aria-labelledby="readyHeader" data-parent="#cssArticle">
+						<div class="card-body page-card-content"> 
+							<p>
+								There are only two things we need before starting: a text editor to create
+								a web page and a web browser to view it. A good free text editor is Notepad++. 
+								A popular browser is Google Chrome. I will be using both of these tools for 
+								our tour, but feel free to use your own favorite tools. 
+							</p>
+							<p>
+								<em>Notepad++:</em> You can download the proper version for your device at the 
+								<a href="https://notepad-plus-plus.org/downloads/" target="_blank">Download page</a>. 
+								Just run the setup program accepting all the defaults.
+							</p>
+							<p>
+								<em>Chrome:</em> Click "Download Chrome" on the 
+								<a href="https://www.google.com/chrome/?brand=CHBD&gclid=EAIaIQobChMIgbecvN7b5AIV0MDACh0DpAQWEAAYASABEgJT6PD_BwE&gclsrc=aw.ds" target="_blank">
+								Download page</a> to automatically download and install.
+							</p>
+							<p>
+								This tour will show code examples. These examples have a caption like: Code 1 with
+								some descriptive text and a file name in parentheses. You can copy the examples
+								from this web page and paste into a new file in your text editor, type the same 
+								code yourself into your text editor as it appears in the examples, or copy the 
+								indicated files in the captions from <a href="https://github.com/johnelomas/johnelomas_examples/tree/master/WebFundamentals/CSS">My Code Examples Code Repository.</a>
+								Feel free to use any method. It is important for the file name to have a html
+								extension. So, make sure your file name ends in html. Go to your folder
+								containing the html file and double-click the file. The file should launch
+								in your web browser.
+							</p>							
+						</div>
+					</div>
+				</section>		
+		
+				<section class="card border border-primary rounded-lg">
+					<div class="card-header" id="exploreHeader">
+						<h3 class="mb-0">
+							<button class="btn btn-link text-center btn-block" type="button" data-toggle="collapse" data-target="#collapseExplore" aria-expanded="false" aria-controls="collapseExplore">
+								Let's Start Exploring
+							</button>
+						</h3>
+					</div>
+					<div id="collapseExplore" class="collapse" aria-labelledby="exploreHeader" data-parent="#cssArticle">
+						<div class="card-body page-card-content"> 
+							<p>
+								There are three ways to style a web page: 
+							</p>
+								<ol>
+									<li>Inline Styling: Adding a style attribute to an HTML element</li>
+									<li>Internal Styling: Adding a style element to a HTML document</li>
+									<li>External Styling: Defining styles in an external file</li>
+								</ol>
+							<p>
+								We will explore each of these methods and some of the reasons for using each one. Applying 
+								different CSS files on the same HTML page can present the web page in different ways while 
+								still showing the same information. We can also apply multiple style sheets to the same 
+								page. Styles will cascade through each method to determine the ultimate styling of each 
+								element on the web page. We can add a style attribute to any element. The style attribute 
+								includes a property you want to set and the value for the property. Let’s look at an example.
+							</p>	
+			<figure class="img-fluid figure">
+				<pre class="border border-primary rounded-lg"><code>
+	&lt;!DOCTYPE html&gt;
+	&lt;html&gt;
+		&lt;head&gt;
+			&lt;meta charset="utf-8"&gt;
+			&lt;title&gt;Hello With Inline Style&lt;/title&gt;		
+		&lt;/head&gt;
+		&lt;body style="background-color:LightCyan;color:orange;font-size:50px;text-align:center;"&gt;	
+			Hello World
+		&lt;/body&gt;
+	&lt;/html&gt;
+							</code></pre>
+						<figcaption class="figure-caption text-left">Code 1: Hello World With Style Attribute (hello_inline_style.html).</figcaption>
+						</figure>							
+						</div>
+					</div>
+				</section>			
+			</article>
+			<section id="bottom"></section>		
+
 			<hr/>			
 			<p class="date-modification">
 				Created: 04 October 2019, Updated: 04 October 2019
@@ -126,12 +234,13 @@
 		</div>
 	</footer>
 	
-	<script async src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<script async src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
 	<script async src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 	<script async src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-	<script async src="./scripts/site.js"></script>
+	<script async src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script async src="https://kit.fontawesome.com/007d90df13.js"></script>
+	<script async src="./scripts/site.js"></script>
+	
 </body>
 
 
