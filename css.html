@@ -194,8 +194,8 @@
 								element on the web page. We can add a style attribute to any element. The style attribute 
 								includes a property you want to set and the value for the property. Let’s look at an example.
 							</p>	
-			<figure class="img-fluid figure">
-				<pre class="border border-primary rounded-lg"><code>
+							<figure class="img-fluid figure">
+							<pre class="border border-primary rounded-lg"><code>
 	&lt;!DOCTYPE html&gt;
 	&lt;html&gt;
 		&lt;head&gt;
@@ -207,11 +207,88 @@
 		&lt;/body&gt;
 	&lt;/html&gt;
 							</code></pre>
-						<figcaption class="figure-caption text-left">Code 1: Hello World With Style Attribute (hello_inline_style.html).</figcaption>
-						</figure>							
+							<figcaption class="figure-caption text-left">Code 1: Hello World With Inline Style (hello_inline_style.html).</figcaption>
+							</figure>	
+							<figure class="figure">
+								<img class="img-fluid border border-primary rounded-lg"
+								src="./images/hello_inline_style.jpg" alt="Browser showing Hello World styled with inline CSS styling.">
+								<figcaption class="figure-caption text-left">Figure 1: Hello World With Inline Style in Browser.</figcaption>
+							</figure>
+							<p>
+								The style attribute here sets four properties:
+								<ol>
+									<li>background-color (the background color) which we are setting to LightCyan</li>
+									<li>color (text color) which we are setting to orange</li>
+									<li>font-size (text size) which we are setting to 50 pixels</li>
+									<li>text-align (alignment of text) which we are setting to center</li>
+								</ol>
+							</p>
+							<p>
+								We can one style property or many. Each property-value pair follows the format: property colon value semi-colon 
+								(property: value;). We can put spaces in each part of this format. The exception to this rule is if the
+								property sets a measurement such as font-size. In such cases, the number and the unit parts of the value
+								cannot have a space. This rule means 50px will work to set the font-size but 50 px will not.
+							</p>
 						</div>
+					</div>						
+				</section>	
+
+				<section class="card border border-primary rounded-lg">
+					<div class="card-header" id="boxHeader">
+						<h3 class="mb-0">
+							<button class="btn btn-link text-center btn-block" type="button" data-toggle="collapse" data-target="#collapseBox" aria-expanded="false" aria-controls="collapseBox">
+								Box Me In
+							</button>
+						</h3>
 					</div>
-				</section>			
+					<div id="collapseBox" class="collapse" aria-labelledby="boxHeader" data-parent="#cssArticle">
+						<div class="card-body page-card-content"> 
+							<p>
+								One important thing to notice is everything we describe in the body (within the body element) of a 
+								web page is in a definable box. Even a round image is still within a box. This concept of a box, 
+								also known as the box model, helps us to design the layout of the web page. There are four parts 
+								of the box model: content, padding, border, and margin.
+							</p>
+							<p>
+								Think about artwork hanging on your wall. Perhaps, you have some artwork where there is a mat 
+								around it and the matted artwork sits in a frame. You probably have a few artwork pieces on your 
+								wall. Some may be matted and framed, some just framed, and maybe some artwork hangs loose on the 
+								wall. Each artwork likely has some space around it. This collection of artworks on the wall and 
+								the arrangement of the collection is the layout of the wall, and the layout of this collection 
+								is like designing the layout of a web page.
+							</p>
+							<p>
+								In our case, the artwork is the content of the box model. The content can be any visual element 
+								on the page—elements such as text, images, video, hyperlinks and such. The border around each 
+								element is the border of the box model. The border can have varying thicknesses, and styles just 
+								like a picture frame. The mat around the artwork would be the padding of the box model—the space, 
+								if any item, between the content and the border. Finally, the spacing between the artwork on the 
+								wall is the margin in our box model. The margin defines how much space to put between each visual 
+								element of the web page. 
+							</p>
+							<p>
+								To determine how much space element will take on the page, we need to consider the height and 
+								width of the content itself, and the size of the padding on each side of the element, and the 
+								size of the border on each side, and the size of the margin on each side. Knowing the total 
+								dimensions of each element, we can set the top and left properties of the content to position it 
+								on the page. The top property indicates how far the content is from the top edge of the page, and 
+								the left property indicates how far the content is from the left edge of the page.
+							</p>
+							<p>
+								There are several units of measurement for describing width, height, top, left, and thickness. The 
+								most common units include px, em, and rem. The px unit is the number of pixels and is a fixed 
+								amount. Using fixed amounts is good for web pages only viewed on a single sized device such as a 
+								desktop. However, users are likely to view your web page on different sized devices such as laptops, 
+								tablets, and smart phones. The use of 50 px text may look great on a laptop but the same text will 
+								look way too large on a smart phone. The use of em and rem as units becomes a better choice when 
+								designing a page to be viewed on any device. The rem measurement is relative to the font size 
+								declared for the html element of the web page; em is relative to the font size declared to the 
+								parent element.
+							</p>
+						
+						</div>
+					<div>
+				</section>		
 			</article>
 			<section id="bottom"></section>		
 
