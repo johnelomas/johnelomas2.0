@@ -172,7 +172,7 @@
 					<div class="card-header" id="exploreHeader">
 						<h3 class="mb-0">
 							<button class="btn btn-link text-center btn-block" type="button" data-toggle="collapse" data-target="#collapseExplore" aria-expanded="false" aria-controls="collapseExplore">
-								Let's Start Exploring
+								Hello, With Style
 							</button>
 						</h3>
 					</div>
@@ -192,7 +192,8 @@
 								still showing the same information. We can also apply multiple style sheets to the same 
 								page. Styles will cascade through each method to determine the ultimate styling of each 
 								element on the web page. We can add a style attribute to any element. The style attribute 
-								includes a property you want to set and the value for the property. Let’s look at an example.
+								includes a property you want to set and the value for the property. Let’s look at an example 
+								of inline styling.
 							</p>	
 							<figure class="img-fluid figure">
 							<pre class="border border-primary rounded-lg"><code>
@@ -224,10 +225,119 @@
 								</ol>
 							</p>
 							<p>
-								We can one style property or many. Each property-value pair follows the format: property colon value semi-colon 
-								(property: value;). We can put spaces in each part of this format. The exception to this rule is if the
-								property sets a measurement such as font-size. In such cases, the number and the unit parts of the value
-								cannot have a space. This rule means 50px will work to set the font-size but 50 px will not.
+								We can implement one style property or many. Each property-value pair follows the format: property colon 
+								value semi-colon (property: value;). We can put spaces in each part of this format. The exception to 
+								this rule is if the property sets a measurement such as font-size. In such cases, the number and the 
+								unit parts of the value cannot have a space. This rule means 50px will work to set the font-size but 
+								50 px will not.
+							</p>
+							<p>
+								Now, let's consider internal styling. We have been applying the styling to the body tag which affects
+								everything within it. However, we may want to have differnet sytling for p elements, another for li
+								elements, and another for a elements. Our HTML file will get very busy with defining the HTML layout of 
+								the page and each instance of p element, li element, and a element containing inline styling. If we wanted
+								to make changes to the styling of p elements, we would have to manually change every p element. If we 
+								changed content, then we would have to add the new elements and remember to add the styling. A better 
+								alternative would be to separate the HTML from the CSS styling. One way to accomplish this goal would 
+								be internal styling. Keeping with our Hello World example from Code 1, we can refactor the page to 
+								use internal styling.
+							</p>
+							<figure class="img-fluid figure">
+							<pre class="border border-primary rounded-lg"><code>	
+	&lt;!DOCTYPE html&gt;
+	&lt;html&gt;
+		&lt;head&gt;
+			&lt;meta charset="utf-8"&gt;
+			&lt;title&gt;Hello With Internal Style&lt;/title&gt;		
+		&lt;/head&gt;
+		&lt;body&gt;
+			Hello World
+		&lt;/body&gt;
+		&lt;style&gt;
+			body {
+				background-color: lightcyan;
+				color: orange;
+				font-size: 50px;
+				text-align: center;
+			}
+		&lt;/style&gt;
+	&lt;/html&gt;	
+							</code></pre>
+							<figcaption class="figure-caption text-left">Code 2: Hello World With Internal Styling (hello_internal_style.html).</figcaption>
+							</figure>	
+							<p>
+								The first step to setting up inline styling is to add a style element outside of the body element. Next,
+								we declare the element for which we want to define a style. In keeping with our example, we declare the 
+								body element. Then, we declare our style properties and values within curly braces (brackets). We can 
+								put each property on a separate line or all on the same line. However, for readability, best practice is 
+								to put each property on a separate line. The rules about separating the property and value with a colon,
+								and ending each setting with a semi-colon still apply. The white space rules still apply, too. There is 
+								no difference in how the page displays using internal styling versus inline styling. The internal style
+								will output exactly the same as in Figure 1 for either method.								
+							</p>
+							<p>
+								Inline styling would be great if our website consisted of a single page. However, most web sites are not 
+								just a single page; most sites are several pages. If we used internal styling for each page and decided 
+								to change the style later, then we would have to edit every page for style. We run into a similar problem 
+								as when we declared styles inline as element attributes. We can use external sytling to avoid this issue.
+							</p>
+							<p>
+								Implementing inline styling means moving the style element of internal styling to a different file, and 
+								including a reference to the style file. This external style file should be a css file instead of a html
+								file. Code 3a shows the HTML for our Hello World example and Code 3b shows the CSS for our example. 								
+							</p>
+							<figure class="img-fluid figure">
+							<pre class="border border-primary rounded-lg"><code>	
+	&lt;!DOCTYPE html&gt; 
+	&lt;html&gt; 
+	&lt;head&gt;
+		&lt;meta charset="utf-8"&gt; 
+		&lt;title&gt;Hello With External Style&lt;/title&gt; 
+		&lt;link rel="stylesheet" href="style.css"&gt; 
+	&lt;/head&gt; 
+	&lt;body&gt; 
+		Hello World 
+	&lt;/body&gt; 
+	&lt;/html&gt;
+							</code></pre>
+						<figcaption class="figure-caption text-left">Code 3a: Hello World With External Styling (hello_external_style.html).</figcaption>
+							</figure>
+							<figure class="img-fluid figure">
+							<pre class="border border-primary rounded-lg"><code>
+	body {
+		background-color: lightcyan;
+		color: orange;
+		font-size: 50px;
+		text-align: center;
+	}	
+							</code></pre>
+							<figcaption class="figure-caption text-left">Code 3b: Hello World With External Styling (style.css).</figcaption>
+							</figure>
+							<p>
+								We have removed all styling from the HTML file and added a link element to the head element. The link 
+								has two attributes. The first attribute is "rel" with "stylesheet" as the value. This attribute and 
+								value remains the same for the addition of every external style sheet. The part that does change is 
+								the href attribute. We set the value for href to the location of the external style file. This location 
+								can be a web address or a local file. In our example, we set the href attribute value to style.css which 
+								is a file in the same folder as the HTML file; both hello_external_style.html and style.css are in the 
+								same folder. The code which was in our style element for internal styling is now in the external style.css 
+								file. If we viewd this HTML file in a browser, it would look exactly like the output in Figure 1.
+							</p> 
+							<p>
+								A good principle of software design is to DRY, Don’t Repeat Yourself. Declaring styles in as style 
+								element for a single page web site, or in a CSS sheet for a multi-page web site is an application of 
+								the DRY principle. When deciding whether to use inline styling, internal styling, or external styling, 
+								think about the overall design of the entire web site and how to minimize styling your page. Pick the 
+								technique which will give you the desired styling without having to make future changes in more places 
+								than is necessary.
+							</p>
+							<p>							
+								There are a couple of questions occurring from these alternatives: 
+								<ul>
+									<li>How do we refer to an element to which a style should apply?</li>
+									<li>What happens if we have different styles for the same element in each of the three methods?</li>
+								</ul>
+								These questions refer to selectors and CSS precedence. We will explore these topics next.
 							</p>
 						</div>
 					</div>						
@@ -267,6 +377,16 @@
 								element of the web page. 
 							</p>
 							<p>
+								Figure 2 is a visual representation of the box model. The content is the the space in the white box 
+								showing the phrase "Hello World." The grey area around the white box and inside the blue lines
+								is the padding. The blue lines are the border. The grey area outside of the blue lines is the margin.
+								<figure class="figure">
+									<img class="img-fluid border border-primary rounded-lg"
+									src="./images/boxmodel.jpg" alt="Visual representation of the box model.">
+									<figcaption class="figure-caption text-left">Figure 2: Visual representation of the box model.</figcaption>
+								</figure>								
+							</p>
+							<p>
 								To determine how much space element will take on the page, we need to consider the height and 
 								width of the content itself, and the size of the padding on each side of the element, and the 
 								size of the border on each side, and the size of the margin on each side. Knowing the total 
@@ -280,7 +400,7 @@
 								amount. Using fixed amounts is good for web pages only viewed on a single sized device such as a 
 								desktop. However, users are likely to view your web page on different sized devices such as laptops, 
 								tablets, and smart phones. The use of 50 px text may look great on a laptop but the same text will 
-								look way too large on a smart phone. The use of em and rem as units becomes a better choice when 
+								look way too large on a smart phone. The use of em or rem as the unit becomes a better choice when 
 								designing a page to be viewed on any device. The rem measurement is relative to the font size 
 								declared for the html element of the web page; em is relative to the font size declared to the 
 								parent element.
