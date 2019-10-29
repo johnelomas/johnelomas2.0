@@ -342,6 +342,118 @@
 						</div>
 					</div>						
 				</section>	
+				
+				<section class="card border border-primary rounded-lg">
+					<div class="card-header" id="selectHeader">
+						<h3 class="mb-0">
+							<button class="btn btn-link text-center btn-block" type="button" data-toggle="collapse" data-target="#collapseSelect" aria-expanded="false" aria-controls="collapseSelect">
+								Select Me, Please
+							</button>
+						</h3>
+					</div>
+					<div id="collapseSelect" class="collapse" aria-labelledby="selectHeader" data-parent="#cssArticle">
+						<div class="card-body page-card-content">
+							<p>
+								Selectors are the means we use to pick what we want to style. There are 4 main ways of selecting an 
+								element to style:
+								<ul>
+									<li>By Tag name</li>
+									<li>By Class attribute</li>
+									<li>By ID attribute</li>
+									<li>By combination of any of the three methods: Tag, Class, ID</li>
+								</ul>
+							</p>
+							<p>
+								We used the By Tag Name method in our examples of internal styling, and of external styling by 
+								defining the style in the body tag. Now, we are going to see how to select by ID and by Class.
+							</p>
+							<figure class="img-fluid figure">
+							<pre class="border border-primary rounded-lg"><code>	
+	&lt;!DOCTYPE html&gt;
+	&lt;html&gt;
+		&lt;head&gt;
+			&lt;meta charset="utf-8"&gt;
+			&lt;title&gt;Hello Styled With Selectors&lt;/title&gt;
+			&lt;link rel="stylesheet" href="hello_selectors.css"&gt;	
+		&lt;/head&gt;
+		&lt;body&gt;
+			&lt;div&gt;
+				&lt;p id="english_hello"&gt;Hello World.&lt;/p&gt;
+				&lt;p id="spanish_hello"&gt;Hola Mundo.&lt;/p&gt;
+				&lt;p id="german_hello"&gt;Hallo Welt.&lt;/p&gt;
+			&lt;/div&gt;
+			&lt;hr&gt;
+			&lt;div&gt;
+				&lt;p class="romantic"&gt;Hello World.&lt;/p&gt;
+				&lt;p class="romantic"&gt;Hola Mundo.&lt;/p&gt;
+				&lt;p class="notromantic"&gt;Hallo Welt.&lt;/p&gt;
+			&lt;/div&gt;		
+		&lt;/body&gt;
+	&lt;/html&gt;
+							</code></pre>
+							<figcaption class="figure-caption text-left">Code 4a: Hello World Styled With Selectors (hello_selectors.html).</figcaption>
+							</figure>
+							<figure class="img-fluid figure">
+							<pre class="border border-primary rounded-lg"><code>	
+	body {
+		background-color:lightcyan
+	}
+
+	#english_hello {
+		color: blue;
+		font-size: 50px;
+		text-align: center;	
+	}
+
+	#german_hello {
+		color: gold;
+		font-size: 50px;
+		text-align: center;	
+	}
+
+	#spanish_hello {
+		color: red;
+		font-size: 50px;
+		text-align: center;	
+	}
+
+	.notromantic {
+		color: lightcoral;
+		font-size: 50px;
+		text-align: center;	
+	}
+
+	.romantic {
+		color: indigo;
+		font-size: 50px;
+		text-align: center;	
+	}
+							</code></pre>
+							<figcaption class="figure-caption text-left">Code 4b: Hello World Styled With Selectors (hello_selectors.css).</figcaption>
+							</figure>
+							<p>
+								In Code 4a, we see our famous "Hello World" phrase in English, in Spanish, and in German repeated 
+								twice. In the first grouping, we set the ID attribute of each instance. In the second grouping, we 
+								set the class attribute of each instance. Remember the ID values must be unique within a web page; 
+								do not use the same ID value on more than one element on the web page. Class names, however, can be 
+								on one or many elements.
+							</p>
+							<p>
+								Code 4b shows the external style sheet for Code 4a. We use the Tag selector of body to set the 
+								background-color of the page. Next, we set the styles for our ID selectors. Notice the ID selectors 
+								all start with the # symbol followed by the ID value from the HTML code. The # character means the 
+								style belongs to the element with the ID name matching the text after #. There are defined styles 
+								for each of the three IDs in Code 4a. Finally, we end with defining styles for the two classes in 
+								Code 4a. We indicate Class styling by starting with a period followed by the class name. Figure 2 
+								shows how this combination of Tag, ID, and Class styles affect the display.
+							</p>
+							<p>
+								Notice we set inline color to red, the p tag color to gold in the style element, and the stylesheet sets the color to blue for the class english_hello. What color do you expect the text “Hello World” will be? As Figure shows, the answer is red. The general order of precedence of styling when the same element is styled differently between each method is: inline has highest precedence, followed by the style element, followed by the style sheet. When an element has an id attribute and a class attribute, the styling for the id attribute wins over the styling for the class attribute. <a href=”https://stuffandnonsense.co.uk/archives/css_specificity_wars.html”>This article</a> takes a Star Wars approach to determining which styling takes precedence based on class, id, tag, and style attribute. 
+
+							</p>
+						</div>
+					</div>						
+				</section>						
 
 				<section class="card border border-primary rounded-lg">
 					<div class="card-header" id="boxHeader">
