@@ -300,7 +300,7 @@
 	&lt;/body&gt; 
 	&lt;/html&gt;
 							</code></pre>
-						<figcaption class="figure-caption text-left">Code 3a: Hello World With External Styling (hello_external_style.html).</figcaption>
+							<figcaption class="figure-caption text-left">Code 3a: Hello World With External Styling (hello_external_style.html).</figcaption>
 							</figure>
 							<figure class="img-fluid figure">
 							<pre class="border border-primary rounded-lg"><code>
@@ -401,31 +401,31 @@
 
 	#english_hello {
 		color: blue;
-		font-size: 50px;
+		font-size: 30px;
 		text-align: center;	
 	}
 
 	#german_hello {
 		color: gold;
-		font-size: 50px;
+		font-size: 30px;
 		text-align: center;	
 	}
 
 	#spanish_hello {
 		color: red;
-		font-size: 50px;
+		font-size: 30px;
 		text-align: center;	
 	}
 
 	.notromantic {
 		color: lightcoral;
-		font-size: 50px;
+		font-size: 30px;
 		text-align: center;	
 	}
 
 	.romantic {
 		color: indigo;
-		font-size: 50px;
+		font-size: 30px;
 		text-align: center;	
 	}
 							</code></pre>
@@ -447,9 +447,115 @@
 								Code 4a. We indicate Class styling by starting with a period followed by the class name. Figure 2 
 								shows how this combination of Tag, ID, and Class styles affect the display.
 							</p>
+							<figure class="figure">
+								<img class="img-fluid border border-primary rounded-lg"
+								src="./images/hello_selectors.jpg" alt="Browser showing Hello World with selectors from Code 4a and 4b.">
+								<figcaption class="figure-caption text-left">Figure 2: Hello World With Selectors from Code 4a and 4b in Browser.</figcaption>
+							</figure>
 							<p>
-								Notice we set inline color to red, the p tag color to gold in the style element, and the stylesheet sets the color to blue for the class english_hello. What color do you expect the text “Hello World” will be? As Figure shows, the answer is red. The general order of precedence of styling when the same element is styled differently between each method is: inline has highest precedence, followed by the style element, followed by the style sheet. When an element has an id attribute and a class attribute, the styling for the id attribute wins over the styling for the class attribute. <a href=”https://stuffandnonsense.co.uk/archives/css_specificity_wars.html”>This article</a> takes a Star Wars approach to determining which styling takes precedence based on class, id, tag, and style attribute. 
+								So, what does Figure 2 tell us about Code 4a and 4b. We see the Tag selector in play where we set the 
+								the background-color of the body tag to light cyan. Each p element in the first group of international 
+								hellos in Code 4 has an unique id attribute. These id values have corresponding entries in the external 
+								style sheet. The result is that the English hello is blue; the German hello is gold; and, the Spanish 
+								hello is red. Each p element in the second grouping of Code 4a has a class attribute. For English and 
+								Spanish the class is romantic (both languages are romance languages), and the German instance has a class
+								of notromantic. These class names are in our style sheet of Code 4b. The result we see in Figure 2 is
+								the English and the Spanish hellos are indigo while the German hello is light coral. This one example 
+								showed the use of Tag, ID, and Class selectors all in play on a single web page.
+							</p>
+							<p>
+								You might be wondering now if we could end up setting the style for the same element using all three 
+								methods. The answer is yes, you can. Well, we obviously cannot apply three different styles to the 
+								same element. One of the styles has to take precedence over the others. There are established rules 
+								for determining precedence order. Code 5a and 5b set up our scenario.
+							</p>
+							<figure class="img-fluid figure">
+							<pre class="border border-primary rounded-lg"><code>
+	&lt;!DOCTYPE html&gt;
+	&lt;html&gt;
+		&lt;head&gt;
+			&lt;meta charset="utf-8"&gt;
+			&lt;title&gt;Hello Style Precedence&lt;/title&gt;
+			&lt;link rel="stylesheet" href="hello_selectors.css"&gt;			
+		&lt;/head&gt;
+		&lt;body&gt;
+			&lt;div&gt;
+				&lt;p id="english_hello" style="color:red"&gt;Hello World.&lt;/p&gt;
+			&lt;/div&gt;	
+		&lt;/body&gt;
+		&lt;style&gt;
+			p {
+				color: gold;
+			}
+		&lt;/style&gt;
+	&lt;/html&gt;
+							</code></pre>
+							<figcaption class="figure-caption text-left">Code 5a: Hello World Styled Three Ways (hello_style_precedence.css).</figcaption>
+							</figure>
 
+							<figure class="img-fluid figure">
+							<pre class="border border-primary rounded-lg"><code>							
+	body {
+		background-color:lightcyan
+	}
+
+	#english_hello {
+		color: blue;
+		font-size: 30px;
+		text-align: center;	
+	}
+
+	#german_hello {
+		color: gold;
+		font-size: 30px;
+		text-align: center;	
+	}
+
+	#spanish_hello {
+		color: red;
+		font-size: 30px;
+		text-align: center;	
+	}
+
+	.notromantic {
+		color: lightcoral;
+		font-size: 30px;
+		text-align: center;	
+	}
+
+	.romantic {
+		color: indigo;
+		font-size: 30px;
+		text-align: center;	
+	}							
+							</code></pre>
+							<figcaption class="figure-caption text-left">Code 5b: Hello World Styled Three Ways (hello_selectors.css).</figcaption>
+							</figure>							
+							
+							<p>
+								Notice we set inline color to red for the p element containing "Hello World" in Code 5a. The internal 
+								styling sets the p element color to gold. The "Hello World" p element also has a id attribute set to 
+								english_hello. The inline style for "Hello World" says it should be red; the internal style says 
+								anything in a p element should be gold; the id attribute ties to the external style in Code 5b and 
+								indicates the color should be blue. We have three competing style rules for the color of "Hello World" 
+								which says it should be red, blue, and gold. However, our greeting can only appear in one color. Can 
+								you guess what color “Hello World” will be?
+							</p>
+							<figure class="figure">
+								<img class="img-fluid border border-primary rounded-lg"
+								src="./images/hello_style_precedence.jpg" alt="Browser showing Hello World in red due to precedence from Code 5a and 5b.">
+								<figcaption class="figure-caption text-left">Figure 3: Hello World Precedence of Code 5a and 5b.</figcaption>
+							</figure>							
+							<p>
+								As Figure 3 shows, the answer is red. The general order of precedence of styling when the same 
+								element is styled differently between each method is: inline has highest precedence, followed internal 
+								styling, followed by external styling. Our scenario in Code 5a and 5b and Figure 3 shows inline 
+								styling won the precedece competition. When an element has an id attribute and a class attribute, 
+								the styling for the id attribute wins over the styling for the class attribute. 
+								<a href="https://stuffandnonsense.co.uk/archives/css_specificity_wars.html" target="_blank">This article</a>
+								<!--https://stuffandnonsense.co.uk/archives/css_specificity_wars.html-->
+								takes a Star Wars approach to determining which styling takes precedence based on class, id, tag, 
+								and style attribute. 
 							</p>
 						</div>
 					</div>						
