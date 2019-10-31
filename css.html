@@ -461,8 +461,79 @@
 								Spanish the class is romantic (both languages are romance languages), and the German instance has a class
 								of notromantic. These class names are in our style sheet of Code 4b. The result we see in Figure 2 is
 								the English and the Spanish hellos are indigo while the German hello is light coral. This one example 
-								showed the use of Tag, ID, and Class selectors all in play on a single web page.
+								showed the use of Tag, ID, and Class selectors all in play on a single web page. One more thing to 
+								keep in mind is that we can use these selectors in internal styling as well as in external styling.
 							</p>
+							<p>
+								Table 1 shows some combinations of selectors and how they affect the styling. This list is far from 
+								exhaustive, but provides a starting point for further exploration. 
+								<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors" target="_blank">Mozilla</a> and 
+								<a href="https://www.w3schools.com/cssref/css_selectors.asp" target="_blank">W3 Schools</a> show 
+								many more possibilities.
+							</p>
+							<figure class="figure">
+							<div class="table-responsive">
+							<table class="table table-striped">
+								<thead>									<tr>
+										<th scope="col">Selector Pattern</th>
+										<th scope="col">Example</th>
+										<th scope="col">Action</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th scope="row">*</th>
+										<td>*</td>
+										<td>Acts on all elements.</td>
+									</tr>
+									<tr>
+										<th scope="row">#</th>
+										<td>#english_hello</td>
+										<td>Acts on element with id set to english_hello.
+									</tr>
+									<tr>
+										<th scope="row">.</th>
+										<td>.romantic</td>
+										<td>Acts on element with class set to romantic.
+									</tr>
+																		<tr>
+										<th scope="row">.classA.classB</th>
+										<td>.romantic.obvious</td>
+										<td>Acts on element with class set to romantic and to obvious.
+									</tr>
+									<tr>
+										<th scope="row">.classA .classB</th>
+										<td>.romantic .obvious</td>
+										<td>Acts on element with class set to obvious enclosed in an element with class set to romantic.
+									</tr>
+									<tr>
+										<th scope="row">elementA elementB</th>
+										<td>li a</td>
+										<td>Acts on a elements enclosed in a li element.
+									</tr>
+									<tr>
+										<th scope="row">elementA, elementB</th>
+										<td>li, a</td>
+										<td>Acts on all li elements and on all a elements.
+									</tr>									
+								</tbody>
+							</table>
+							</div>
+							<figcaption class="figure-caption text-left">Table 1: Some selector combinations.</figcaption>
+							</figure>
+						</div>
+					</div>						
+				</section>
+				<section class="card border border-primary rounded-lg">
+					<div class="card-header" id="oneruleHeader">
+						<h3 class="mb-0">
+							<button class="btn btn-link text-center btn-block" type="button" data-toggle="collapse" data-target="#collapseOnerule" aria-expanded="false" aria-controls="collapseOnerule">
+								One Style to Rule Them All
+							</button>
+						</h3>
+					</div>
+					<div id="collapseOnerule" class="collapse" aria-labelledby="oneruleHeader" data-parent="#cssArticle">
+						<div class="card-body page-card-content"> 				
 							<p>
 								You might be wondering now if we could end up setting the style for the same element using all three 
 								methods. The answer is yes, you can. Well, we obviously cannot apply three different styles to the 
@@ -556,6 +627,18 @@
 								<!--https://stuffandnonsense.co.uk/archives/css_specificity_wars.html-->
 								takes a Star Wars approach to determining which styling takes precedence based on class, id, tag, 
 								and style attribute. 
+							</p>
+							<p>
+								One important thing to mention is the !important rule in styling. The !important rule is the 
+								rule which rules them all. Look back at Code 5a and 5b and Figure 3. The inline styling set 
+								the color to red, the internal style set the p element color to gold, and the external style set 
+								the color to blue. Our text ended up in red. If we changed the internal styling for the p tag 
+								from "color: gold;" to "color: gold !important;", then the text would be in gold instead of red. 
+								The !important rule says this styling is important and takes has the highest precedence in 
+								styling. Be cautious of how you use this rule, though. People with vision problems who visit web 
+								pages can adjust colors and color contrasts to make the pages easier to read for them. Using the 
+								!important rule on color styling can prevent the ability to adjust color schemes for improved 
+								readability. 							
 							</p>
 						</div>
 					</div>						

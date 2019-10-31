@@ -24,6 +24,10 @@ body {
 	background-color: lightblue;
 }
 
+div table {
+	border: #007bff solid 0.18em !important;
+}
+
 figure {
 	padding-left: 3rem;
 }
