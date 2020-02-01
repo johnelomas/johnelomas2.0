@@ -623,10 +623,7 @@
 								styling, followed by external styling. Our scenario in Code 5a and 5b and Figure 3 shows inline 
 								styling won the precedece competition. When an element has an id attribute and a class attribute, 
 								the styling for the id attribute wins over the styling for the class attribute. 
-								<a href="https://stuffandnonsense.co.uk/archives/css_specificity_wars.html" target="_blank">This article</a>
-								<!--https://stuffandnonsense.co.uk/archives/css_specificity_wars.html-->
-								takes a Star Wars approach to determining which styling takes precedence based on class, id, tag, 
-								and style attribute. 
+								<a href="https://stuffandnonsense.co.uk/archives/css_specificity_wars.html" target="_blank">This article</a> takes a Star Wars approach to determining which styling takes precedence based on class, id, tag, and style attribute. 
 							</p>
 							<p>
 								One important thing to mention is the !important rule in styling. The !important rule is the 
@@ -678,13 +675,13 @@
 								element of the web page. 
 							</p>
 							<p>
-								Figure 2 is a visual representation of the box model. The content is the the space in the white box 
+								Figure 4 is a visual representation of the box model. The content is the the space in the white box 
 								showing the phrase "Hello World." The grey area around the white box and inside the blue lines
 								is the padding. The blue lines are the border. The grey area outside of the blue lines is the margin.
 								<figure class="figure">
 									<img class="img-fluid border border-primary rounded-lg"
 									src="./images/boxmodel.jpg" alt="Visual representation of the box model.">
-									<figcaption class="figure-caption text-left">Figure 2: Visual representation of the box model.</figcaption>
+									<figcaption class="figure-caption text-left">Figure 4: Visual representation of the box model.</figcaption>
 								</figure>								
 							</p>
 							<p>
@@ -706,7 +703,70 @@
 								declared for the html element of the web page; em is relative to the font size declared to the 
 								parent element.
 							</p>
-						
+							<p>
+								<figure class="figure">
+									<img class="img-fluid border border-primary rounded-lg"
+									src="./images/Wall_Initial.jpg" alt="Three pictures on a wall.">
+									<figcaption class="figure-caption text-left">Figure 5a: Positioning objects on a wall.</figcaption>
+								</figure>
+
+								<figure class="figure">
+									<img class="img-fluid border border-primary rounded-lg"
+									src="./images/Wall_WithMargin.jpg" alt="Three pictures on a wall and one has a margin and all three have padding.">
+									<figcaption class="figure-caption text-left">Figure 5b: Positioning objects on a wall with a margin and padding.</figcaption>
+								</figure>	
+
+							<figure class="img-fluid figure">
+							<pre class="border border-primary rounded-lg"><code>							
+	&lt;!DOCTYPE html&gt;
+	&lt;html&gt;
+		&lt;head&gt;
+			&lt;meta charset="utf-8"&gt;
+			&lt;title&gt;Travel Pictures&lt;/title&gt;
+		&lt;/head&gt;
+		&lt;body                style="border: 2px solid red;"&gt;
+			&lt;div         style="border: 4px solid black; height: 140px; width: 498px;                        position:relative;"&gt;	
+				&lt;div style="border: 4px solid red;   height: 120px; width: 158px; left: 0px;   top: 0px; position:absolute;"&gt;	
+					&lt;img src="aircraft.jpg"&gt;
+				&lt;/div&gt;
+				&lt;div style="border: 4px solid blue;  height: 120px; width: 158px; left: 166px; top: 0px; position:absolute;"&gt;	
+					&lt;img src="vwtaxi.jpg"&gt;
+				&lt;/div&gt;
+				&lt;div style="border: 4px solid green; height: 120px; width: 158px; left: 332px; top: 0px; position:absolute;"&gt;	
+					&lt;img src="goodtravel.jpg"&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/body&gt;
+	&lt;/html&gt;	
+							</code></pre>
+							<figcaption class="figure-caption text-left">Code 6a: Hello World Styled Three Ways (wall_one.html).</figcaption>
+							</figure>
+							<figure class="img-fluid figure">							
+							<pre class="border border-primary rounded-lg"><code>
+	&lt;!DOCTYPE html&gt;
+	&lt;html&gt;
+		&lt;head&gt;
+			&lt;meta charset="utf-8"&gt;
+			&lt;title&gt;Travel Pictures&lt;/title&gt;
+		&lt;/head&gt;
+		&lt;body                style="border: 2px solid red;"&gt;
+			&lt;div         style="border: 4px solid black; height: 150px; width: 540px;                        padding: 0px; position:relative;"&gt;
+				&lt;div style="border: 4px solid red;   height: 120px; width: 158px; left: 0px;   top: 0px; padding: 5px; position:absolute;  margin: 6px;"&gt;	
+					&lt;img src="aircraft.jpg"&gt;
+				&lt;/div&gt;
+				&lt;div style="border: 4px solid blue;  height: 120px; width: 158px; left: 188px; top: 0px; padding: 5px; position:absolute;"&gt;
+					&lt;img src="vwtaxi.jpg"&gt;
+				&lt;/div&gt;
+				&lt;div style="border: 4px solid green; height: 120px; width: 158px; left: 364px; top: 0px; padding: 5px; position:absolute;"&gt;
+					&lt;img src="goodtravel.jpg"&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/body&gt;
+	&lt;/html&gt;
+							</code></pre>
+							<figcaption class="figure-caption text-left">Code 6b: Hello World Styled Three Ways (wall_two.html).</figcaption>
+							</figure>								
+							</p>
 						</div>
 					<div>
 				</section>		
