@@ -704,6 +704,35 @@
 								parent element.
 							</p>
 							<p>
+								We have talked about a lot of things so far. Let's see these different parts of the box model in action. Figure 5a shows three pictures--an airplane in the sky,
+								a yellow tax, and an inspiring travel quote--each with a 4 pixel wide border. The corresponding code is in Code 6a.
+							</p>
+							<p>
+								Figure 5a starts with a thin red border surrounding everything. This border is for the body element. In essence, this border represents our entire wall. Even 
+								though I cut off the right side of the image to fit this page, remain confident
+								that the border continues to the right and forms a complete box. The top, left, and right sides show the edges of the total viewable area of our wall. The bottom border shows the bottom edge of our wall. However, as we add things to our wall, 
+								this bottom will move down allowing our wall to grow vertically.
+							</p>
+							<p>
+								Next, we define a section of our wall in a div, and wrap it in a black border. This div has no set left or top values. Combined with the relative positioning,
+								the div starts in the upper left corner of the wall. Each of the three pictures is 158 pixels wide and 120 pixels tall, and has a 4 pixel wide border. As a result, each picture with the border is 166 pixels wide (158 + 4 + 4) and 128 pixels tall (120 + 4 + 4). 
+							</p>
+							<p>
+								The first image (the airplane) is at Left 0 and Top 0 which places it in the upper left corner of 
+								our wall section (div with black border). Knowing each image is 166 px wide, 
+								we know the Left property of our second image (taxi) needs to be at least 166
+								so as not to cover our first image. In the same way, our third image (saying) needs to have a Left value of 332 to not cover the second image. We set the height of the section to 140 px but our images are only 128 px tall. The placement of our images at Top 0 px leaves a 12 px blank space beneath the images. We could set the Top value of any of the image from 0 to 12 px to move the image vertically
+								within the section.	
+							</p>
+							<p>
+								Figure 5b shows some space (padding) between each of the images and their related 
+								border. The first image has some additional spacing around the outside of the border. As we can see in Code 6b, there is a 5 px padding around the images, and the first image also has a 6 px margin. The extra padding means each image has an additional width and height of another 10 px (top and bottom, left and right) resulting in the taxi image and the saying image being 176 px wide and 138 px tall. The first image takes an additional 12 px in height and width due to the margin meaning the image takes 188 px in width and 150 px in height. Note that 150 px takes more vertical space than the 140 px of div height in Figure 5a/Code 6a. We need to increase the div height to 150 px to fit the image without being able to put images any lower in the section. The taxi image needs a Left value of 188 px to not interfere with the plane image. The saying image needs to have a Left value of 364 px (188 + 138) to keep clear of the other images. 
+							</p>
+							<p>
+								So, yeah, these real examples of the box model in real use is a little technical and really dependent on using some tedious calculations. This little side step was necessary to really show how interrelated
+								each property of the model is. We can always add additional space around our images by setting Top and Left values higher; our examples kept to the minimal values to maintain separation of each image's box. In some cases, we may want to overlap objects on our walls. We can allow our Top and Left properties of the image as are without compensating for neighboring object's values. We can even use negative values for Top and Left which means the image will actually shift up or left instead of down and right. For now, I hope you have seen how we can arrange the layout of a web page.
+							</p>
+							<p>
 								<figure class="figure">
 									<img class="img-fluid border border-primary rounded-lg"
 									src="./images/Wall_Initial.jpg" alt="Three pictures on a wall.">
@@ -739,7 +768,7 @@
 		&lt;/body&gt;
 	&lt;/html&gt;	
 							</code></pre>
-							<figcaption class="figure-caption text-left">Code 6a: Hello World Styled Three Ways (wall_one.html).</figcaption>
+							<figcaption class="figure-caption text-left">Code 6a: Box model in action for Figure 5a (wall_one.html).</figcaption>
 							</figure>
 							<figure class="img-fluid figure">							
 							<pre class="border border-primary rounded-lg"><code>
@@ -764,12 +793,50 @@
 		&lt;/body&gt;
 	&lt;/html&gt;
 							</code></pre>
-							<figcaption class="figure-caption text-left">Code 6b: Hello World Styled Three Ways (wall_two.html).</figcaption>
+							<figcaption class="figure-caption text-left">Code 6b: Box model in action for Figure 5b (wall_two.html).</figcaption>
 							</figure>								
 							</p>
 						</div>
 					<div>
-				</section>		
+				</section>	
+				<section class="card border border-primary rounded-lg">
+					<div class="card-header" id="nextHeader">
+						<h3 class="mb-0">
+							<button class="btn btn-link text-center btn-block" type="button" data-toggle="collapse" data-target="#collapseNext" aria-expanded="false" aria-controls="collapseNext">
+								What Next?
+							</button>
+						</h3>
+					</div>
+					<div id="collapseNext" class="collapse" aria-labelledby="nextHeader" data-parent="#cssArticle">
+						<div class="card-body page-card-content">					
+							<p>
+								We have only begun to scratch the surface of styling a web page, but we have seen the foundation of the concept. There are dozens of different CSS properties. Combining these properties allows very elaborate and creative designs. Feel free to visit the following sites to learn more.
+							</p>
+							<ul>
+								<li>
+									<a href="https://www.w3.org/Style/CSS/Overview.en.html">W3C</a> hosts the official 
+									CSS standards and is a great place to explore all of CSS.
+								</li>
+								<li>
+									<a href="https://www.w3schools.com/cssref/default.asp">W3 Schools</a> 
+									lists a complete CSS reference section. A benefit here is the Try It functionality which
+									lets you modify the examples and see the result of the change. Although there is some disagreement on W3 Schools being true to official standards, I find the Try It examples helpful in providing immediate feedback when you are learning something new.
+								</li>
+							</ul>
+							</p>
+							<p>
+								This tour looked at styling for web pages best viewed on a larger screen. Many users view web pages on tablets and smart phones neither of which has the expansive viewing area of larger devices. Pages styled for larger devices will be not as attractive, or as easy, to navigate on smaller devices. As a result, we should style web pages to be responsive--styling which responds to the available screen size. There are tools to help with responsive design. CSS has properties for grid views and flex boxes. Also, there are frameworks (libraries of code) which can help. A common framework is <a href="https://getbootstrap.com/">Bootstrap.</a> I have used Bootstrap to style this site. If you resize your browser window to smaller size, you can see how the various responsive effects. Bootstrap also helps with more complex things like the photo carousel on the <a href=".\about.html">About Me</a> page or the collapsible sections on these tour pages.
+							</p>
+							<p>
+								Styling web pages can get pretty complex and is an art in itself. Like Bootstrap and flexbox for helping style with responsiveness, there are tools frameworks for helping with page styling. <a href="https://sass-lang.com/">SASS</a> is a popular tool for this purpose. SASS has some features which CSS does not have but would be easier to use if it had them. We can use these SASS features, and SASS will create the CSS files for you.
+							</p>
+							<p>
+								We learned about creating the basic structure of a web page in the <a href="./html.html">HTML Tour.</a> Next, we need to learn how to make our web pages more interactive. This task requires adding scripting to our web page. Please take the <a href="./js.html">JavaScript Tour </a> to learn how we can use scripting to make our pages more dynamic and interesting.
+							</p>
+						</div>
+					</div>
+				</section>
+				
 			</article>
 			<section id="bottom"></section>		
 
