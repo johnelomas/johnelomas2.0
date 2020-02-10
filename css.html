@@ -202,13 +202,13 @@
 							</figure>
 							<p>
 								The style attribute here sets four properties:
-								<ol>
-									<li>background-color (the background color) which we are setting to LightCyan</li>
-									<li>color (text color) which we are setting to orange</li>
-									<li>font-size (text size) which we are setting to 50 pixels</li>
-									<li>text-align (alignment of text) which we are setting to center</li>
-								</ol>
 							</p>
+							<ol>
+								<li>background-color (the background color) which we are setting to LightCyan</li>
+								<li>color (text color) which we are setting to orange</li>
+								<li>font-size (text size) which we are setting to 50 pixels</li>
+								<li>text-align (alignment of text) which we are setting to center</li>
+							</ol>
 							<p>
 								We can implement one style property or many. Each property-value pair follows the format: property colon value semi-colon (property: value;). We can put spaces in each part of this format. The exception to this rule is if the property sets a measurement such as font-size. In such cases, the number and the unit parts of the value cannot have a space. This rule means 50px will work to set the font-size but 50 px will not.
 							</p>
@@ -282,12 +282,14 @@
 							<p>
 								A good principle of software design is to DRY, Don’t Repeat Yourself. Declaring styles in as style element for a single page web site, or in a CSS sheet for a multi-page web site is an application of the DRY principle. When deciding whether to use inline styling, internal styling, or external styling, think about the overall design of the entire web site and how to minimize styling your page. Pick the technique which will give you the desired styling without having to make future changes in more places than is necessary.
 							</p>
-							<p>							
+							<p>
 								There are a couple of questions occurring from these alternatives: 
-								<ul>
-									<li>How do we refer to an element to which a style should apply?</li>
-									<li>What happens if we have different styles for the same element in each of the three methods?</li>
-								</ul>
+							</p>
+							<ul>
+								<li>How do we refer to an element to which a style should apply?</li>
+								<li>What happens if we have different styles for the same element in each of the three methods?</li>
+							</ul>
+							<p>
 								These questions refer to selectors and CSS precedence. We will explore these topics next.
 							</p>
 						</div>
@@ -307,13 +309,13 @@
 							<p>
 								Selectors are the means we use to pick what we want to style. There are 4 main ways of selecting an 
 								element to style:
-								<ul>
-									<li>By Tag name</li>
-									<li>By Class attribute</li>
-									<li>By ID attribute</li>
-									<li>By combination of any of the three methods: Tag, Class, ID</li>
-								</ul>
 							</p>
+							<ul>
+								<li>By Tag name</li>
+								<li>By Class attribute</li>
+								<li>By ID attribute</li>
+								<li>By combination of any of the three methods: Tag, Class, ID</li>
+							</ul>
 							<p>
 								We used the By Tag Name method in our examples of internal styling, and of external styling by defining the style in the body tag. Now, we are going to see how to select by ID and by Class.
 							</p>
@@ -572,12 +574,12 @@
 							</p>
 							<p>
 								Figure 4 is a visual representation of the box model. The content is the space in the white box showing the phrase "Hello World." The grey area around the white box and inside the blue lines is the padding. The blue lines are the border. The grey area outside of the blue lines is the margin.
-								<figure class="figure">
-									<img class="img-fluid border border-primary rounded-lg"
-									src="./images/boxmodel.jpg" alt="Visual representation of the box model.">
-									<figcaption class="figure-caption text-left">Figure 4: Visual representation of the box model.</figcaption>
-								</figure>								
 							</p>
+							<figure class="figure">
+								<img class="img-fluid border border-primary rounded-lg"
+								src="./images/boxmodel.jpg" alt="Visual representation of the box model.">
+								<figcaption class="figure-caption text-left">Figure 4: Visual representation of the box model.</figcaption>
+							</figure>								
 							<p>
 								To determine how much space element will take on the page, we need to consider the height and width of the content itself, and the size of the padding on each side of the element, and the size of the border on each side, and the size of the margin on each side. Knowing the total dimensions of each element, we can set the top and left properties of the content to position it on the page. The top property indicates how far the content is from the top edge of the page, and the left property indicates how far the content is from the left edge of the page.
 							</p>
@@ -604,18 +606,17 @@
 							<p>
 								So, yeah, these real examples of the box model in real use is a little technical and really depended on using some tedious calculations. This little sidestep was necessary to really show how interrelated each property of the model is. We can always add additional space around our images by setting Top and Left values higher; our examples kept to the minimal values to maintain separation of each image's box. In some cases, we may want to overlap objects on our walls. We can allow our Top and Left properties of the image as are without compensating for neighboring object's values. We can even use negative values for Top and Left which means the image will shift up or left instead of down and right. For now, I hope you have seen how we can arrange the layout of a web page.
 							</p>
-							<p>
-								<figure class="figure">
-									<img class="img-fluid border border-primary rounded-lg"
-									src="./images/Wall_Initial.jpg" alt="Three pictures on a wall.">
-									<figcaption class="figure-caption text-left">Figure 5a: Positioning objects on a wall.</figcaption>
-								</figure>
+							<figure class="figure">
+								<img class="img-fluid border border-primary rounded-lg"
+								src="./images/Wall_Initial.jpg" alt="Three pictures on a wall.">
+								<figcaption class="figure-caption text-left">Figure 5a: Positioning objects on a wall.</figcaption>
+							</figure>
 
-								<figure class="figure">
-									<img class="img-fluid border border-primary rounded-lg"
-									src="./images/Wall_WithMargin.jpg" alt="Three pictures on a wall and one has a margin and all three have padding.">
-									<figcaption class="figure-caption text-left">Figure 5b: Positioning objects on a wall with a margin and padding.</figcaption>
-								</figure>	
+							<figure class="figure">
+								<img class="img-fluid border border-primary rounded-lg"
+								src="./images/Wall_WithMargin.jpg" alt="Three pictures on a wall and one has a margin and all three have padding.">
+								<figcaption class="figure-caption text-left">Figure 5b: Positioning objects on a wall with a margin and padding.</figcaption>
+							</figure>	
 
 							<figure class="img-fluid figure">
 							<pre class="border border-primary rounded-lg"><code>							
@@ -667,9 +668,8 @@
 							</code></pre>
 							<figcaption class="figure-caption text-left">Code 6b: Box model in action for Figure 5b (wall_two.html).</figcaption>
 							</figure>								
-							</p>
 						</div>
-					<div>
+					</div>
 				</section>	
 				<section class="card border border-primary rounded-lg">
 					<div class="card-header" id="nextHeader">
@@ -695,9 +695,8 @@
 									lets you modify the examples and see the result of the change. Although there is some disagreement on W3 Schools being true to official standards, I find the Try It examples helpful in providing immediate feedback when you are learning something new.
 								</li>
 							</ul>
-							</p>
 							<p>
-								This tour looked at styling for web pages best viewed on a larger screen. Many users view web pages on tablets and smart phones neither of which has the expansive viewing area of larger devices. Pages styled for larger devices will be not as attractive, or as easy, to navigate on smaller devices. As a result, we should style web pages to be responsive--styling which responds to the available screen size. There are tools to help with responsive design. CSS has properties for grid views and flex boxes. Also, there are frameworks (libraries of code) which can help. A common framework is <a href="https://getbootstrap.com/">Bootstrap.</a> I have used Bootstrap to style this site. If you resize your browser window to smaller size, you can see how the various responsive effects. Bootstrap also helps with more complex things like the photo carousel on the <a href=".\about.html">About Me</a> page or the collapsible sections on these tour pages.
+								This tour looked at styling for web pages best viewed on a larger screen. Many users view web pages on tablets and smart phones neither of which has the expansive viewing area of larger devices. Pages styled for larger devices will be not as attractive, or as easy, to navigate on smaller devices. As a result, we should style web pages to be responsive--styling which responds to the available screen size. There are tools to help with responsive design. CSS has properties for grid views and flex boxes. Also, there are frameworks (libraries of code) which can help. A common framework is <a href="https://getbootstrap.com/">Bootstrap.</a> I have used Bootstrap to style this site. If you resize your browser window to smaller size, you can see how the various responsive effects. Bootstrap also helps with more complex things like the photo carousel on the <a href="./about.html">About Me</a> page or the collapsible sections on these tour pages.
 							</p>
 							<p>
 								Styling web pages can get complex and is an art in itself. Like Bootstrap and flexbox for helping style with responsiveness, there are tools frameworks for helping with page styling. <a href="https://sass-lang.com/">SASS</a> is a popular tool for this purpose. SASS has some features which CSS does not have but would be easier to use if it had them. We can use these SASS features, and SASS will create the CSS files for you.
