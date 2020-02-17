@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<meta name="Description" content="Introduce JavaScript and how it applies to web development.">
+	<meta name="Description" content="Introduce CSS, Cascading Style Sheets, and how they apply to web development.">
 	<meta name="theme-color" content="#ADD8E6"/>
 	<link rel="stylesheet" media="screen" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link rel="stylesheet" media="screen" href="./css/custom.css">
@@ -15,7 +15,7 @@
 	<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
 	<link rel="manifest" href="/site.webmanifest">
-	<title>A Learning Journey in Software Development: JavaScript in web development.</title>
+	<title>A Learning Journey in Software Development: CSS in web development.</title>
 </head>
 
 <body onload="addNewBadge()">
@@ -78,12 +78,12 @@
 									</a>
 								</li>
 								<li>
-									<a class="dropdown-item" href="./css.html" data-modified-date="02/15/2020">
+									<a class="dropdown-item active" href="./css.html" data-modified-date="02/15/2020">
 										CSS
 									</a>
 								</li>	
 								<li>
-									<a class="dropdown-item active" href="#" data-modified-date="10/04/2019">
+									<a class="dropdown-item" href="./js.html" data-modified-date="10/04/2019">
 										JavaScript
 										<span class="sr-only">(current)</span>
 									</a>
@@ -95,24 +95,41 @@
 			</ul>
 		</div>
 	</nav>
-
-		<h1 class="text-center page-title">Tour of Web Fundamentals &mdash; JavaScript</h1>
 		
 		<section class="container">	
-			<div class="row">
-			<figure class="figure mx-auto">
-				<img id="dust" class="img-fluid border border-primary rounded-lg" src="./images/dust.jpg"
-					alt="Pardon our dust while we refurbish.">
-				<figcaption class="figure-caption text-left">Image is proprietary to 
-					The Walt Disney Company. Please visit <a href="https://www.disney.com/">Disney.</a></figcaption>
-			</figure>
-			</div>
+			<h1 class="text-center page-title">Tour of Web Fundamentals &mdash; Javascript</h1>
+			<article class="accordion" id="jsArticle">
+				<section class="card border border-primary rounded-lg">
+					<div class="card-header" id="goodHeader">
+						<h3 class="mb-0">
+							<button class="btn btn-link text-center btn-block" type="button" data-toggle="collapse" data-target="#collapseGood" aria-expanded="true" aria-controls="collapseGood">
+								Good to Know
+							</button>
+						</h3>
+					</div>
+					<div id="collapseGood" class="collapse show" aria-labelledby="goodHeader" data-parent="#jsArticle">
+						<div class="card-body page-card-content"> 
+							<p>	
+								This tour builds on what we saw during our tours of <a href="./html.html">HTML</a> and <a href="./css.html">CSS</a>. Be sure to revisit these tours before continuing here. Our tour of HTML showed examples of unstyled web pages, and the CSS tour showed how to make web pages more attractive. In this tour, we learn how a web page can change in content, style, and behavior based on user interaction.
+							</p>
+							<p>
+								JavaScript originated at Netscape to add dynamic behavior to web pages. Later, Netscape submitted JavaScript to <a href="https://www.ecma-international.org/" target="_blank" rel="noreferrer">ECMA</a> to maintain the standards of the language. ECMA has ECMAScript as a root language. TypeScript and JavaScript are both child languages of ECMAScript which means neither can do anything which does not exist in ECMAScript. Not all features which exist in ECMAScript have to exist in either TypeScript or JavaScript. TypeScript is a compiled language and can compile into JavaScript whereas JavaScript is an interpreted language. Modern web browsers contain a JavaScript interpreter which means we can execute the same JavaScript code in these browsers running in any operating system. This broad presence of the interpreter makes JavaScript a good language for creating dynamic web sites.
+								<!--https://developer.mozilla.org/en-US/docs/Web/JavaScript, https://www.ecma-international.org/ -->
+							</p>
+
+						</div>
+					</div>
+				</section>
+				
+				
+			</article>
+			<section id="bottom"></section>		
+
 			<hr/>			
 			<p class="date-modification">
-				Created: 04 October 2019, Updated: 04 October 2019
+				Created: 11 February 2020.
 			</p>
 		</section>
-
 		
 		<!-- The push section is to force the sticky footer. Add NO CONTENT beyond or in this section. -->
 		<section class="push">
@@ -127,12 +144,13 @@
 		</div>
 	</footer>
 	
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<script async src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
 	<script async src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 	<script async src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-	<script async src="./scripts/site.js"></script>
+	<script async src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script async src="https://kit.fontawesome.com/007d90df13.js"></script>
+	<script async src="./scripts/site.js"></script>
+	
 </body>
 
 
