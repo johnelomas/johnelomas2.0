@@ -113,7 +113,7 @@
 								This tour builds on what we saw during our tours of <a href="./html.html">HTML</a> and <a href="./css.html">CSS</a>. Be sure to revisit these tours before continuing here. Our tour of HTML showed examples of unstyled web pages, and the CSS tour showed how to make web pages more attractive. In this tour, we learn how a web page can change in content, style, and behavior based on user interaction.
 							</p>
 							<p>
-								JavaScript originated at Netscape to add dynamic behavior to web pages. Later, Netscape submitted JavaScript to <a href="https://www.ecma-international.org/" target="_blank" rel="noreferrer">ECMA</a> to maintain the standards of the language. ECMA has ECMAScript as a root language. TypeScript and JavaScript are both child languages of ECMAScript which means neither can do anything which does not exist in ECMAScript. Not all features which exist in ECMAScript have to exist in either TypeScript or JavaScript. TypeScript is a compiled language and can compile into JavaScript whereas JavaScript is an interpreted language. Modern web browsers contain a JavaScript interpreter which means we can execute the same JavaScript code in these browsers running in any operating system. This broad presence of the interpreter makes JavaScript a good language for creating dynamic web sites.
+								JavaScript originated at Netscape to add dynamic behavior to web pages. Later, Netscape submitted JavaScript to <a href="https://www.ecma-international.org/" target="_blank" rel="noreferrer">ECMA</a> to maintain the standards of the language. ECMA has ECMAScript as a root language. TypeScript and JavaScript are both child languages of ECMAScript which means neither can do anything which does not exist in ECMAScript. Not all features which exist in ECMAScript must exist in either TypeScript or JavaScript. TypeScript is a compiled language and can compile into JavaScript whereas JavaScript is an interpreted language. Modern web browsers contain a JavaScript interpreter which means we can execute the same JavaScript code in these browsers running in any operating system. This broad presence of the interpreter makes JavaScript a good language for creating dynamic web sites.
 								<!--https://developer.mozilla.org/en-US/docs/Web/JavaScript, https://www.ecma-international.org/ -->
 							</p>
 
@@ -121,9 +121,64 @@
 					</div>
 				</section>
 				
-				
-			</article>
-			<section id="bottom"></section>		
+				<section class="card border border-primary rounded-lg">
+
+					<div class="card-header" id="readyHeader">
+						<h3 class="mb-0">
+							<button class="btn btn-link text-center btn-block" type="button" data-toggle="collapse" data-target="#collapseReady" aria-expanded="false" aria-controls="collapseReady">
+								Get Ready
+							</button>
+						</h3>
+					</div>
+					<div id="collapseReady" class="collapse" aria-labelledby="readyHeader" data-parent="#jsArticle">
+						<div class="card-body page-card-content"> 
+							<p>
+								There are only two things we need before starting: a text editor to create a web page and a web browser to view it. A good free text editor is Notepad++. A popular browser is Google Chrome. I will be using both tools for our tour, but feel free to use your own favorite tools. 
+							</p>
+							<p>
+								<em>Notepad++:</em> You can download the proper version for your device at the 
+								<a href="https://notepad-plus-plus.org/downloads/" target="_blank" rel="noreferrer">Download page</a>. 
+								Just run the setup program accepting all the defaults.
+							</p>
+							<p>
+								<em>Chrome:</em> Click "Download Chrome" on the 
+								<a href="https://www.google.com/chrome/?brand=CHBD&gclid=EAIaIQobChMIgbecvN7b5AIV0MDACh0DpAQWEAAYASABEgJT6PD_BwE&gclsrc=aw.ds" target="_blank" rel="noreferrer">
+								Download page</a> to automatically download and install.
+							</p>
+							<p>
+								This tour will show code examples. These examples have a caption like: Code 1 with some descriptive text and a file name in parentheses. You can copy the examples from this web page and paste into a new file in your text editor, type the same code yourself into your text editor as it appears in the examples, or copy the indicated files in the captions from <a href="https://github.com/johnelomas/johnelomas_examples/tree/master/WebFundamentals/CSS">My Code Examples Code Repository.</a> Feel free to use any method. It is important for the file name to have a html extension. So, make sure your file name ends in html. Go to your folder containing the html file and double-click the file. The file should launch in your web browser.
+							</p>
+							<p>
+								We can also run JavaScript code within the browser itself. Clicking the <kbd>F12</kbd> key will launch the Developer Tools for the browser. This command works across a variety of browsers including Internet Explorer, Edge, Chrome, Firefox, and others. The developer tools allow you to see the HTML design of the page, related source files for the page, network traffic. Among these tools will be a Console tab where you can enter and run JavaScript commands. These commands only work for the browser session and will disappear when you close the Developer Tools. You still need to save your JavaScript code in a file if you want to use it again. We will explore the Console tool more during our tour.
+							</p>
+						</div>
+					</div>
+				</section>	
+
+				<section class="card border border-primary rounded-lg">
+					<div class="card-header" id="readyHeader">
+						<h3 class="mb-0">
+							<button class="btn btn-link text-center btn-block" type="button" data-toggle="collapse" data-target="#collapseGrammar" aria-expanded="false" aria-controls="collapseGrammar">
+								Grammatically Yours
+							</button>
+						</h3>
+					</div>
+					<div id="collapseGrammar" class="collapse" aria-labelledby="readyHeader" data-parent="#jsArticle">
+						<div class="card-body page-card-content"> 
+							<p>
+								Every language has a syntax which describes how to arrange characters into words into meaningful phrases. The syntax of many computer languages can be similar, but there are distinctions among them. There are a few basic commonalities among them all. These items are:
+							</p>
+							<ol>
+								<li>Declaring a variable</li>
+								<li>Assigning a value to the variable</li>
+								<li>Testing the value of the variable</li>
+								<li>Looping through a range of values for the variable</li>
+							</ol>
+
+
+						</div>
+					</div>
+				</section>
 
 			<hr/>			
 			<p class="date-modification">
