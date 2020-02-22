@@ -97,7 +97,7 @@
 	</nav>
 		
 		<section class="container">	
-			<h1 class="text-center page-title">Tour of Web Fundamentals &mdash; Javascript</h1>
+			<h1 class="text-center page-title">Tour of Web Fundamentals &mdash; JavaScript</h1>
 			<article class="accordion" id="jsArticle">
 				<section class="card border border-primary rounded-lg">
 					<div class="card-header" id="goodHeader">
@@ -174,8 +174,79 @@
 								<li>Testing the value of the variable</li>
 								<li>Looping through a range of values for the variable</li>
 							</ol>
+							<p>
+								Think about signing for a world cruise. Before you can buy your ticket, you sign into your cruise account by providing your name and password on the cruise company's website. The cruise company needs to collect this information to check their list of all names and passwords to see if you provided a valid combination of name and password. Behind the scenes, the website creates a variable for name and another for password, assigns the name the user provided to a name variable and the password to a password variable, then loops through each user in the users lists to test if there is a user with the name stored in the name variable with a password stored in the name variable. If there is a match, the website allows the user access to the site or denies access if there is not a match and may even tell the user what was wrong. In this short example, we have seen all four basic commonalities: declare a variable, give the variable a value, loop through a range of values, and test the variable. 
+							</p>
+							<p>
+								Now that we have described a real world scenario, the question is how can we do all these things with JavaScript. Let's start with declaring variables and assigning values to variables. There are three keywords for declaring a variable: var, let, and const (short for constant). The keyword var is the one we will see most often because let and const are recent additions to JavaScript after ECMAScript introduced them in version 6. For now, we will look at var.
+							</p>
+							<p>
+								JavaScript is a weakly typed language which means variables can hold different types of data. Some languages only allow a variable to hold certain types of data. JavaScript infers the data type based on how we assign values to the variable. Data types in JavaScript are number, string, Boolean, object, function, and undefined.
+							</p>
+							<p>
+								I am going to give a brief description of each data type and follow up with examples later. Numbers are just what you would expect--any whole number or decimal number. Strings are any text--any combination of letters, punctuation, and numbers. Booleans are true and false values. 
+							</p>
+							<p>
+								Objects are like a combination of variables referring to the same thing. Think of a person. A person has a name and an age. Say person A is Sally and person A's age is 20, and person B is Jack and person B's age is 21. Each person is an object. Sally is one object and Jack is another. Both Jack and Sally objects have common characteristics (name and age) which may have different values. 
+							</p>
+							<p>
+								A function is a collection of JavaScript statements. A statement is a single instruction. Each statement needs to end with a semi-colon (;) character. JavaScript does not force us to use the ending character for each statement and will automatically add it if you don't provide it. However, you run the risk JavaScript may add the ending character in an expected place. Best practice is to always use it. Functions are parts of code which we expect to use multiple times, but we only want to write once. A simplistic function would be one called Add which takes two number variables as input and returns the sum of the two numbers.
+							</p>
+							<p>
+								Undefined is a little bit different than then other data types as it does not actually represent a variable's value. Rather undefined refers to a variable which does not have a value. If we declare a variable but do not assign it a value, the variable is undefined.
+							</p>
+							<p>
+								Let's look at variables using our web browser's console window. As I mentioned earlier, I am showing examples using Chrome. I can access Developer Tools by pressing my <kbd>F12</kbd> key. This short cut works on most browsers. If you have trouble finding it, look in your browser's menu for an item like "More Tools" with a sub-item like "Developer Tools" and click that item. Once Developer Tools are available, there will be tabs for several tools. Click on the tab for Console. The Console lets us enter JavaScript code and see the results.
+							</p>
+							<p>
+								We can enter each statement from Code 1 into the Console window. The results of entering each of these statements is in Figure 1.
+							</p>
+							<figure class="img-fluid figure">
+							<pre class="border border-primary rounded-lg"><code>
+	var age = 25;			// data type is number	
+	
+	var cost = 1.49;		// data type is number	
 
+	var name = 'Jack';		// data type is string	
 
+	var name = "Jack";		// data type is string	
+
+	var age = '25';			// data type is string	
+
+	var isMinor = false;	        // data type is boolean	
+
+	isMinor = true;			// data type is Boolean	
+
+	var x;				// data type is undefined	
+
+	var personA = {			// data type is object	
+			name: 'Jack',
+			age: 25
+		      };
+		
+	function add(x, y) {		// data type is function	
+		var sum = x + y;
+		return sum;
+	}
+	
+	/* Function add requires two number values as input.
+	   Function add returns the sum of the two number inputs.
+	*/	
+							</code></pre>
+							<figcaption class="figure-caption text-left">Code 1: Declaring variables and setting values (declare_variables.js).</figcaption>
+							</figure>
+							<figure class="figure">
+								<img class="img-fluid border border-primary rounded-lg"
+								src="./images/variables_in_console.jpg" alt="Browser Console Tool showing entry of statements from Code 1.">
+								<figcaption class="figure-caption text-left">Figure 1: Results of entering statements from Code 1 into Console window.</figcaption>
+							</figure>
+							<p>
+								The first thing we notice in Code 1 is how we declare a variable and assign it a value. We use the var keyword along with a unique variable name to declare the variable. We assign a value to the variable by including the equals (=) character and supplying the value and including the semi-colon (;) statement ending character to signify we are done writing the statement. The first two entries declare variables age and cost; the age variable holds a whole number (integer) value of 25, and the cost variable holds a decimal value of 1.48. Next to each statement in Code 1, there is a line of text which identifies the data type of the variable on that line. This text begins with 2 forward slashes (//). The slashes denote a comment. JavaScript does not execute code in a statement. Comments are helpful to include descriptions of what is happening in the code. Also, if we look at Figure 1, then we will see the Console writes undefined  on each line after we enter a statement. We can disregard this behavior for now as it is not relevant to what we are exploring.
+							</p>
+							<p>
+								The next 3 entries declare variables name and age. We first declare the variable name and assign the value Jack with single-quotation marks. Next we redeclare the variable name and assign it the value Jack with double-quotation marks. The use of either single or double quotation marks indicates the data type is a string. We can use either form of declaring a string variable value. However, if our string contains an apostrophe (similar to a single quotation mark, then it will be necessary to declare the variable's value with double-quotation marks so JavaScript. For example, if our value was O'Brien and we assigned the value using single-quotation marks, JavaScript will become confused and declare a syntax error because it does not know how to handle the third single-quotation mark. Also notice that we redeclared the variable age and assigned the value 25 in double-quotation marks. Even though we know 25 is a number, JavaScript thinks it is a string because we enclosed it in quotation marks.
+							</p>
+							
 						</div>
 					</div>
 				</section>
