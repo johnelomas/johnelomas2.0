@@ -24,6 +24,11 @@ body {
 	background-color: lightblue;
 }
 
+code {
+	background-color: white;
+	color: black;
+}
+
 div table {
 	border: #007bff solid 0.18em !important;
 }
