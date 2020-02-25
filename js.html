@@ -165,6 +165,7 @@
 					</div>
 					<div id="collapseGrammar" class="collapse" aria-labelledby="readyHeader" data-parent="#jsArticle">
 						<div class="card-body page-card-content"> 
+							<h4>An Introduction to JavaScript as a Programming Language</h4>
 							<p>
 								Every language has a syntax which describes how to arrange characters into words into meaningful phrases. The syntax of many computer languages can be similar, but there are distinctions among them. There are a few basic commonalities among them all. These items are:
 							</p>
@@ -177,6 +178,7 @@
 							<p>
 								Think about signing for a world cruise. Before you can buy your ticket, you sign into your cruise account by providing your name and password on the cruise company's website. The cruise company needs to collect this information to check their list of all names and passwords to see if you provided a valid combination of name and password. Behind the scenes, the website creates a variable for name and another for password, assigns the name the user provided to a name variable and the password to a password variable, then loops through each user in the users lists to test if there is a user with the name stored in the name variable with a password stored in the name variable. If there is a match, the website allows the user access to the site or denies access if there is not a match and may even tell the user what was wrong. In this short example, we have seen all four basic commonalities: declare a variable, give the variable a value, loop through a range of values, and test the variable. 
 							</p>
+							<h4>Declaring Variables, Assigning Values, and Data Types</h4>
 							<p>
 								Now that we have described a real world scenario, the question is how can we do all these things with JavaScript. Let's start with declaring variables and assigning values to variables. There are three keywords for declaring a variable: var, let, and const (short for constant). The keyword var is the one we will see most often because let and const are recent additions to JavaScript after ECMAScript introduced them in version 6. For now, we will look at var.
 							</p>
@@ -233,7 +235,7 @@
 	   Function add returns the sum of the two number inputs.
 	*/	
 	
-	var name = ['jack', 'sally', 'zero'];	// data type is object
+	var names = ['jack', 'sally', 'zero'];	// data type is object
 							</code></pre>
 							<figcaption class="figure-caption text-left">Code 1: Declaring variables and setting values (declare_variables.js).</figcaption>
 							</figure>
@@ -268,13 +270,27 @@
 								Our last stop in our Code 1 visit is for a special type of object called an array. An array is a list of things such as a list of cruise passenger names, we declare an array using the var keyword with a name. We assign values to an array by enclosing them as a set of values separated by commas with square brackets ( [] ). We can use items of different data types in an array. For example, we could have a list of numbers or a list of names or a list of objects. We can even have a mix of data types in an array. Each item in an array has an integer index value starting with 0. We can use the array name and the index to get the value in the array's index position. For example, <code>names[0];</code> returns "jack", and <code>names[1];</code> returns "Sally", and <code>names[2];</code> returns "zero".
 							</p> 
 							<p>
-								One last thing we see in Code 1 is the comment after each declaration stating the data type of variable. We can use the typeof keyword followed by the name of the data item. Figure 2 shows a few examples of typeof for the object personA and the array names we used in Code 1. We enter <code>typeof personA;</code>or <code>typeof names;</code> into the Console window and see both variables are of object data type. If we enter <code>typeof personA.name;</code>, we see name is of string data type. If we enter <code>typeof personA.age;</code>, we see age is of number data type. Finally, entrring <code>typeof names[0];</code>shows the name[0] value "jack" is of string data type. Feel free to experiment with using typeof with the other variables we saw in Code 1, or any new variables you wish to declare.
+								One last thing we see in Code 1 is the comment after each declaration stating the data type of variable. We can use the typeof keyword followed by the name of the data item. Figure 2 shows a few examples of typeof for the object personA and the array names we used in Code 1. We enter <code>typeof personA;</code>or <code>typeof names;</code> into the Console window and see both variables are of object data type. If we enter <code>typeof personA.name;</code>, we see name is of string data type. If we enter <code>typeof personA.age;</code>, we see age is of number data type. Finally, entering <code>typeof names[0];</code>shows the name[0] value "jack" is of string data type. Feel free to experiment with using typeof with the other variables we saw in Code 1, or any new variables you wish to declare.
+							</p>
+							<p> 
+								You may be wondering how we can see the value of a variable. A new keyword phrase we can use is console.log(variable name). If we enter <code>console.log(cost);</code> into the Console, the window will report 1.49 as the value of cost. Similarly, <code>console.log(isMinor);</code> will return the value of true as true is the last value we assigned to isMinor in Code 1. If we did a console.log on one of the two object data type variables, the window will report everything which exists between the curly brace, or square, bracket. For example, <code>console.log(names);</code> reports jack,sally,zero. Of course, we can still get individual parts of an object, or array, like we did when using the typeof keyword. We can enter <code>console.log(personA.name);</code> or <code>console.log(names[2]);</code>, for example, to get the individual values from the objects.			
 							</p>
 							<figure class="figure">
 								<img class="img-fluid border border-primary rounded-lg"
 								src="./images/variables_types.jpg" alt="Browser Console Tool showing the results of using typeof to get the data type.">
 								<figcaption class="figure-caption text-left">Figure 2: Browser Console Tool showing the results of using typeof to get the data type.</figcaption>
-							</figure>							
+							</figure>
+							<h4>Testing Equality</h4>
+							<p>
+								The boolean data type comes into play when testing variable. If two variables have the same value, it is true that the variables are equal. Conversely, if the two values are not the same, it is false that the variables are equal.
+							</p>
+							<p>
+								We used a single equals ( = ) character to assign a value to a variable. We use the equals character for testing equality, but in a slightly different syntax. To make things just a little bit more interesting, there are two ways of testing equality due to the weak data typing nature of JAvaScript. We use double equal characters ( == ) to test if two variables have the same value and three equal signs to test if two variables have the same value and are of the same data type. If we want to test if two values are not equal, then we can use an exclamation point ( ! ) in place of the first equals character in the equality test.
+							</p>
+							<p>
+								Continuing with our examples in Figure 1, we could enter <code>age == personA.age;</code> in the Console. We noticed earlier that both variables have values which look like the number 25, but the data type of age is actually string as a result of the value being in quotation marks. JavaScript will look at the two values and see if they are similar of if it can convert one data type to the other. In the comparison of age and personA.age, JavaScript says the value of age looks like a number. Since the value of age (25) looks like the value of personA.age (25), JavaScript reports this comparison as equal and reports the result as true in the Console window. However, if we enter <code>age === personA.age;</code> in the Console, JavaScript will report false in the Console. Even though the values look the same, the data types are different. Since the value and the data type is not the same, they variables are not equal. We can also look at these tests using the not equals notations. If we enter <code>age != personA.age;</code> in the Console, the Console reports false because it is a false statement that 25 is not equal to 25. Entering <code>age !== personA.age;</code> will report true because the value the values are the same, but the data types are not. Since the data types are not the same, it is a true statement that the two values are not equal.
+							</p> 
+							<!-- Greater greater-eqaul, less less-equal, if then else, nested if, &&, ::, switch, ternary if -->
 						</div>
 					</div>
 				</section>
