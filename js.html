@@ -288,9 +288,52 @@
 								We used a single equals ( = ) character to assign a value to a variable. We use the equals character for testing equality, but in a slightly different syntax. To make things just a little bit more interesting, there are two ways of testing equality due to the weak data typing nature of JAvaScript. We use double equal characters ( == ) to test if two variables have the same value and three equal signs to test if two variables have the same value and are of the same data type. If we want to test if two values are not equal, then we can use an exclamation point ( ! ) in place of the first equals character in the equality test.
 							</p>
 							<p>
-								Continuing with our examples in Figure 1, we could enter <code>age == personA.age;</code> in the Console. We noticed earlier that both variables have values which look like the number 25, but the data type of age is actually string as a result of the value being in quotation marks. JavaScript will look at the two values and see if they are similar of if it can convert one data type to the other. In the comparison of age and personA.age, JavaScript says the value of age looks like a number. Since the value of age (25) looks like the value of personA.age (25), JavaScript reports this comparison as equal and reports the result as true in the Console window. However, if we enter <code>age === personA.age;</code> in the Console, JavaScript will report false in the Console. Even though the values look the same, the data types are different. Since the value and the data type is not the same, they variables are not equal. We can also look at these tests using the not equals notations. If we enter <code>age != personA.age;</code> in the Console, the Console reports false because it is a false statement that 25 is not equal to 25. Entering <code>age !== personA.age;</code> will report true because the value the values are the same, but the data types are not. Since the data types are not the same, it is a true statement that the two values are not equal.
+								Figure 3 shows the results of testing the equality of various value comparisons. We start by using the statements from Code 1 and shod in Figure 1.  The JavaScript expressions for equality are == and ===, and JavaScript expressions for non-equality testing are er= and !==. First, let's enter <code>age == personA.age;</code> in the Console. We noticed earlier that both variables have values which look like the number 25, but the data type of age is actually string as a result of the value being in quotation marks. JavaScript will look at the two values and see if they are similar of if it can convert one data type to the other. In the comparison of age and personA.age, JavaScript says the value of age looks like a number. Since the value of age (25) looks like the value of personA.age (25), JavaScript reports this comparison as equal and reports the result as true in the Console window. However, if we enter <code>age === personA.age;</code> in the Console, JavaScript will report false in the Console. Even though the values look the same, the data types are different. Since the value and the data type is not the same, they variables are not equal. We can also look at these tests using the not equals notations. If we enter <code>age != personA.age;</code> in the Console, the Console reports false because it is a false statement that 25 is not equal to 25. Entering <code>age !== personA.age;</code> will report true because the value the values are the same, but the data types are not. Since the data types are not the same, it is a true statement that the two values are not equal. 
 							</p> 
-							<!-- Greater greater-eqaul, less less-equal, if then else, nested if, &&, ::, switch, ternary if -->
+							<p>
+								Sometimes, we want to test a range of values instead of an exact value. JavaScript expressions contains &lt; and &lt;= for testing if one value is less than, or less than or equal, to another value. Similarly, JavaScript provides &gt;, and &gt;= to test if one value is greater, or greater than or equal, to another value. Figure 3 shows some less than tests and some greater than tests. It is true that 1 is less than 2 (<code>1 &lt; 2;</code>), but false that 1 is greater than 2 (<code>1 &gt; 2;</code>). We also know it is false that 1 is less than itself (<code>1 &lt; 1;</code>), but true that 1 is less than or equal to 1 (<code>1 &lt;= 1;</code>). Analogously, 2 is not greater than 2 (<code>2 &gt; 2;</code>), but is greater than or equal to 2  (<code>2 &gt;= 2;</code>).
+							</p>
+							<figure class="figure">
+								<img class="img-fluid border border-primary rounded-lg"
+								src="./images/equality.jpg" alt="Browser Console Tool showing the results of equality tests we described in text.">
+								<figcaption class="figure-caption text-left">Figure 3: Testing equality in Browser Console.</figcaption>
+							</figure>	
+							<p>
+								Often we make certain decisions if something is true, or alternate decisions if something is false. These decisions could have multiple steps. For instance, we would only allow an adult (someone whose age is at least 18) to buy a cruise ticket. Also, we only want to sell a liquor package on the cruise to someone of legal drinking age (age is at least 21). JavaScript uses a if...else statement for such scenarios. Code 2 shows an example of using the if...else statement. Figure 5 shows the use of this code in the Browser Console.
+							</p>
+							<p>
+								Code 1 begins by setting three variables: isMinor to tell us if the person is too young to buy a ticket, isAlcoholMinor to tell us if the person is too young to buy alcohol, and age which we set to 17 for our initial test. This example combines two tests--one for isMinor and one for isAlcoholMinor. The if...else statement begins with an equality test. If the equality test evaluates to true then we perform the actions inside the first set of curly braces. If the fires equality check evaluates as false, then we ignore the first set of statements and move to the else part. The else part can contain another equality check like we do in Code 1.
+							</p>
+							<p>
+								The first test is if the age is less than 18. Someone below 18 is both a minor and an alcohol minor. Since the age is 17, the first test is true which means we set both isMinor and isAlcoholMinor to true. Since this statement is true, JavaScript does not need to continue with any other parts of the if...else statement. We enter <code>isMinor;</code> and <code>isAlcoholMinor;</code> to see both values are indeed false.
+							</p>
+							<p>
+								Next, we change the age to 20 by entering <code>age = 20;</code> and re-entering our if...then statement. Since age is now 20, then the age &lt; 18 equality test is false which causes us to move to the first else part. This else has aa equality test. Since age which has a value of 20 is less than 21, we run the statemeents in the second group of statements. These statements set isMinor to false and isAlcoholMinor to true. We enter <code>isMinor;</code> and <code>isAlcoholMinor;</code> to see these values are es expected. JavaScript ignores the final else block because the second test was true. If we had set the age to 21, then JavaScript would have skipped the statement blocks with the first two equality test and set both isMinor and isAlcoholMinor to false.
+							</p>
+							<figure class="img-fluid figure">
+							<pre class="border border-primary rounded-lg"><code>
+	var isMinor, isAlcoholMinor, age = 17;	
+
+	if ( age &lt; 18 ) {
+		isMinor = true;
+		isAlcoholMinor = true;
+	} else if ( age &lt; 21 ) {
+		isMinor = false;
+		isAlcoholMinor = true;
+	} else {
+		isMinor = false;
+		isAlcoholMinor = false;
+	}
+							</code></pre>
+							<figcaption class="figure-caption text-left">Code 2: Demonstrating if...else statement (ifthen.js).</figcaption>
+							</figure>	
+							<br/>
+							<figure class="figure">
+								<img class="img-fluid border border-primary rounded-lg"
+								src="./images/ifthen.jpg" alt="Showing if else statement in Browser Console.">
+								<figcaption class="figure-caption text-left">Figure 4: Showing if else statement in Browser Console.</figcaption>
+							</figure>	
+							<h4>Looping over Values</h4>							
 						</div>
 					</div>
 				</section>
