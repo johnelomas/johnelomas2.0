@@ -333,7 +333,41 @@
 								src="./images/ifthen.jpg" alt="Showing if else statement in Browser Console.">
 								<figcaption class="figure-caption text-left">Figure 4: Showing if else statement in Browser Console.</figcaption>
 							</figure>	
-							<h4>Looping over Values</h4>							
+							<h4>Looping over Values</h4>
+							<p>
+								When someone books our world cruise, we collect a list of passengers in the booking. Initially, we do not know if the person is traveling alone or with others. There may be times when we need to use this list of passengers. Setting a variable for everybody in the group is not practical because we will not know how many variables we will need. An array becomes practical in this case; we can create one array variable which holds all of the passenger names. Looping through the array allows us to access each passenger's name.
+							</p>
+							<p>
+								Code 3 shows an example of how we can loop over an array of passengers. This code will not run in Console so I am not going to show it in Console. We will need to run it from a script associated with a web page. We will see how to get JavaScript to run as script in a web page later. Let's talk about the for statement from a code perspective for now.
+							</p>
+							<p>							
+								First, we declare passengers as an array and populate the array with three passengers: Jack, Sally, and Zero. Next, we loop over the passengers array with the for statement. This statement contains three parts. 
+							</p>
+							<p>
+								Keep in mind we can access each entry in an array with an integer (aka index) and the index starts at 0. So, the first part of the for statements declares and index variable set to 0. We will use this variable to access each passenger in the array.The next part of the for statement controls how many times we are going to loop. 
+							</p>
+							<p>							
+								There is a property of arrays called length which indicates the number of items in the array. We want to loop for every passenger and we have 3 passengers. So, we want to loop 3 times. So long as the value of index is less than 3, we want to loop again. We do not want to loop less or equal 3 because we have 3 passengers and we start counting with 0. Three passengers starting at 0 means we want to use index values 0, 1, and 2. 
+							</p>
+							<p>
+								The last part of the for statement changes the value of index every time we loop so we can access the next passenger. The ++ is a JavaScript command which adds 1 to the variable. In this case, index++ is the same as index + 1. 
+							</P>
+							<p>
+								Every time we loop, JavaScript will execute the alert function. JavaScripts's alert function is a pop up window with and OK button and displays the message passed into the alert function. Here, alert will show the passenger's name.
+							</p>
+							<p>
+								When JavaScript runs this code, it will start with index at 0 and say 0 is less than 3 (count of passengers and display "Jack" which is the name of the passenger in passengers[0]. Upon return to the for line, index becomes 1 (0 + 1) and JavaScript says 1 is less than 3 and displays "Sally" which is the name of the passenger in passengers[1]. Upon return to the for line, index become 2 (1 + 1) and JavaScript says 2 is less than 3 and displays "Zero" which is the name of the passengers in passengers[2]. Upon return to the for line, index becomes 3 (2 + 1) and JavaScript says 3 is not less than 3 and will no longer continue with the looping. JavaScript will skip out of the loop and execute any code after the for statement.
+							</p>
+							<figure class="img-fluid figure">
+							<pre class="border border-primary rounded-lg"><code>
+	var passengers = ["Jack", "Sally", "Zero"];
+
+	for (var index = 0; index < passengers.length; index++) {	
+		alert(passengers[index]);
+	}
+							</code></pre>
+							<figcaption class="figure-caption text-left">Code 3: Looping an array (for.js).</figcaption>
+							</figure>							
 						</div>
 					</div>
 				</section>
