@@ -116,13 +116,11 @@
 								JavaScript originated at Netscape to add dynamic behavior to web pages. Later, Netscape submitted JavaScript to <a href="https://www.ecma-international.org/" target="_blank" rel="noreferrer">ECMA</a> to maintain the standards of the language. ECMA has ECMAScript as a root language. TypeScript and JavaScript are both child languages of ECMAScript which means neither can do anything which does not exist in ECMAScript. Not all features which exist in ECMAScript must exist in either TypeScript or JavaScript. TypeScript is a compiled language and can compile into JavaScript whereas JavaScript is an interpreted language. Modern web browsers contain a JavaScript interpreter which means we can execute the same JavaScript code in these browsers running in any operating system. This broad presence of the interpreter makes JavaScript a good language for creating dynamic web sites.
 								<!--https://developer.mozilla.org/en-US/docs/Web/JavaScript, https://www.ecma-international.org/ -->
 							</p>
-
 						</div>
 					</div>
 				</section>
 				
 				<section class="card border border-primary rounded-lg">
-
 					<div class="card-header" id="readyHeader">
 						<h3 class="mb-0">
 							<button class="btn btn-link text-center btn-block" type="button" data-toggle="collapse" data-target="#collapseReady" aria-expanded="false" aria-controls="collapseReady">
@@ -156,14 +154,14 @@
 				</section>	
 
 				<section class="card border border-primary rounded-lg">
-					<div class="card-header" id="readyHeader">
+					<div class="card-header" id="grammarHeader">
 						<h3 class="mb-0">
 							<button class="btn btn-link text-center btn-block" type="button" data-toggle="collapse" data-target="#collapseGrammar" aria-expanded="false" aria-controls="collapseGrammar">
 								Grammatically Yours
 							</button>
 						</h3>
 					</div>
-					<div id="collapseGrammar" class="collapse" aria-labelledby="readyHeader" data-parent="#jsArticle">
+					<div id="collapseGrammar" class="collapse" aria-labelledby="grammarHeader" data-parent="#jsArticle">
 						<div class="card-body page-card-content"> 
 							<h4>An Introduction to JavaScript as a Programming Language</h4>
 							<p>
@@ -371,6 +369,89 @@
 						</div>
 					</div>
 				</section>
+				
+				<section class="card border border-primary rounded-lg">
+					<div class="card-header" id="scriptHeader">
+						<h3 class="mb-0">
+							<button class="btn btn-link text-center btn-block" type="button" data-toggle="collapse" data-target="#collapseScript" aria-expanded="false" aria-controls="collapseScript">
+								Script, Please
+							</button>
+						</h3>
+					</div>
+					<div id="collapseScript" class="collapse" aria-labelledby="scriptHeader" data-parent="#jsArticle">
+						<div class="card-body page-card-content"> 
+							<p>
+								Looking at JavaScript in the browser Console gave us a chance to focus on learning the basics of the language. We learned about data types, setting variables, comparing variable values, and looking at a range of related values. This part of the tour was informative and introduced us to enough of the language so we can learn more about it and other ways of doing some of the same things we have seen. The big question now is how does JavaScript work with a web page. Let's explore this concept.
+							</p>
+							<p>
+								Like how we learned to integrate CSS into a web page during the <a href=".\css.html">CSS Tour</a>, there are 3 ways to integrate JavaScript: inline, internal, in external file. Code 4a is for a basic web page showing how to use each method, and Code 4b shows the related external JavaScript code. Figure 5 shows the web page and the result of clicking the Internal button.
+							</p>
+							<p>
+								Code 4a shows 3 buttons and each button has an onClick attribute. The onClick attribute means the onClick event and defines what should happen on the event of the user clicking the button. Events describe user interactions such as pressing a key, changing an entry in a text box, picking an item from a list of items, checking a check box, and many more. We have to provide an action to perform when clicking the button. This action is the JavaScript code.
+							</p>
+							<p>
+								The Inline button has an alert statement. Clicking the Inline button executes the alert statement. The alert window pops up, as we see in Figure 5, and says "Welcome Cruiser. I am Inline." This demonstration is pretty simple. However, in the last section when we saw how to loop, we could have several statements. Putting all of these statements inline with the button could get very messy to read the HTML code. We can get away from this messiness by using internal scripting.
+							</p>
+							<p>
+								For the Inline button, we provide a function (internalHello) to execute when we click the Internal button. The web page needs to find the internalHello method and finds it in the script node just after the body node. The internalHello function says to show an alert with the message "Hello Cruiser. I am Internal." The result is similar to what we see in Figure 5. The only difference is the text in the alert. The benefit is we can more complicated code, like the looping of passenger names, here and keep the JavaScript code separate from the HTML code. We can one, or many, functions in the script node.
+							</p>
+							<p>
+								Maybe we have really long JavaScript functions, or many functions, or the same code we want to use on several web pages. In these situations, we could move our JavaScript code to a separate file. Code 4b shows the contents of the scripting.js file. In this simple example, we only have one function which looks similar to the internalHello function for the Internal button. The external file contains the externalHello function which shows an alert with the "Hello Cruiser. I am External." message. Note that we normally name external JavaScript files with a js extension (i.e. scripting.js). We can include the external file to the HTML file through a scripting node. The second scripting node (the one below the one containing the internalHello function) shows how we connect the HTML and JS files. We make this connection using the src (think source) attribute which describes where to find the external JavaScript file. The src attribute says to look for a file called scripting.js which is in the same folder as the scripting.html file.
+							</p>
+							<figure class="img-fluid figure">
+							<pre class="border border-primary rounded-lg"><code>
+	&lt;!DOCTYPE html&gt;
+	&lt;html&gt;
+		&lt;head&gt;
+			&lt;meta charset="utf-8"&gt;
+			&lt;title&gt;Hello Cruisers Example&lt;/title&gt;		
+		&lt;/head&gt;
+		&lt;body&gt;
+			&lt;p&gt;
+				We can integrate JavaScript inline, internally, or externally. 
+			&lt;/p&gt;
+			&lt;p&gt;
+				Click each button to see these different methods in action.	
+			&lt;/p&gt;			
+			&lt;button onClick="alert('Hello Cruiser. I am inline.');"&gt;Inline&lt;/button&gt;		
+			&lt;button onClick="internalHello()"&gt;Internal&lt;/button&gt;
+			&lt;button onClick="externalHello()"&gt;External&lt;/button&gt;
+		&lt;/body&gt;
+		&lt;script&gt;
+			function internalHello() {
+				alert('Hello Cruiser. I am internal.');
+			}
+		&lt;/script&gt;
+		&lt;script src=".\scripting.js"&gt;&lt;/script&gt;		
+		&lt;style&gt;
+			button {
+				margin: 10px;
+			}
+		&lt;/style&gt;
+		
+	&lt;/html&gt;
+							</code></pre>
+							<figcaption class="figure-caption text-left">Code 4a: Web Page Showing 3 Methods of Calling JavaScript (scripting.html).</figcaption>
+							</figure>	
+							<figure class="img-fluid figure">
+							<pre class="border border-primary rounded-lg"><code>
+	function externalHello () {
+		alert('Hello Cruiser. I am External.');		
+	}
+							</code></pre>
+							<figcaption class="figure-caption text-left">Code 4b: Contents of External JavaScript File (scripting.js).</figcaption>
+							</figure>
+							<figure class="figure">
+								<img class="img-fluid border border-primary rounded-lg"
+								src="./images/scripting.jpg" alt="Results of Clicking the Inline Button.">
+								<figcaption class="figure-caption text-left">Figure 5: Results of Clicking the Inline Button.</figcaption>
+							</figure>							
+							<p>
+								Like adding styling to our HTML, we have 3 ways of adding JavaScript to our web page. The best practice is to use the external method. Now that we have seen how to integrate JavaScript into a web page and a very basic example of allowing a user to interact with the page, we will explore how we can use JavaScript to alter our page and to respond to user input in the next stop on our tour.
+							</p>
+						</div>
+					</div>
+				</section>						
 
 			<hr/>			
 			<p class="date-modification">
