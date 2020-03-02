@@ -451,7 +451,260 @@
 							</p>
 						</div>
 					</div>
-				</section>						
+				</section>	
+
+				<section class="card border border-primary rounded-lg">
+					<div class="card-header" id="cruiseHeader">
+						<h3 class="mb-0">
+							<button class="btn btn-link text-center btn-block" type="button" data-toggle="collapse" data-target="#collapseCruise" aria-expanded="false" aria-controls="collapseCruise">
+								Come Cruise with Me
+							</button>
+						</h3>
+					</div>
+					<div id="collapseCruise" class="collapse" aria-labelledby="scriptHeader" data-parent="#jsArticle">
+						<div class="card-body page-card-content"> 	
+							<p>
+								Now is the time to bring HTML, CSS, and JavaScript together to demonstrate an interactive web page. In this case, we are going to look at a web page where a traveler is going on a world cruise and needs to provide names of his fellow travelers and to provide payment by credit card before cruising. Before our traveler can submit payment, he must provide at least 1 name and the name must be at least 3 characters long. When our traveler has finished adding names, we need a valid credit card number. Once we have all the needed information, then we can give our cruiser a bon voyage. Figure 6 shows our initial page.
+							</p>
+							<figure class="figure">
+								<img class="img-fluid border border-primary rounded-lg"
+								src="./images/cruise1.jpg" alt="Initial World Cruise Sign Up Page.">
+								<figcaption class="figure-caption text-left">Figure 6: World Cruise Sign Up Page.</figcaption>
+							</figure>	
+							<p>
+								If we look at our page in Figure 6 and compare it to the code in Code 5, we notice there are several things in the HTML which we do not see. These "missing" items are the Done Adding Passengers button and the whole payment section. A review of the CSS in Code 6 shows some things are hidden, and the payment div node is set to not display. Logically, it makes sense to not show things as available when we are not ready to see them. If we showed the payment section, there is a possibility of the user trying to make a payment before adding passengers to the booking. So, we control what the user can see and do to make sure we have the needed information before moving to the next step.
+							</p> 
+							<p>
+								The first thing we need is the list of passenger names. We see a list saying we need to add passengers and a button we can click to add their names. The Add Passengers button (id addPass) runs the addPassenger function when we click the button. The first thing the addPassengers function does is prompt for the passenger name. The prompt statement is like the alert statement except it allows a user to input something. We capture the user input in the name variable. Figure 7 shows the prompt for passenger name.
+							</p>
+							<figure class="figure">
+								<img class="img-fluid border border-primary rounded-lg"
+								src="./images/cruise2.jpg" alt="Initial World Cruise Sign Up Page.">
+								<figcaption class="figure-caption text-left">Figure 7: World Cruise Sign Up Page.</figcaption>
+							</figure>	
+							<p> 
+								Once we have the user input for name, we pass the value to the validateName function. This function gets the length of the name. Since we have said we want to make sure the name is at least 3 characters long, we test if the name value's length is less than 3. If the length is less than 3, then we alert the user and return false; we return true if the length is at least 3. Not all functions need to return a value, but we can return a value if the initial call to the function needs one. Since we are trying to determine if the name is valid, then we do need to know. If the name is not valid, we do not add the name to the passenger and action stops. The addPassenger function continues if the name was valid. Figure 8 shows the alert message about the passenger name length when the name is not valid. After clicking the alert's OK button, the system returns to the main page.
+							</p> 
+							<figure class="figure">
+								<img class="img-fluid border border-primary rounded-lg"
+								src="./images/cruise3.jpg" alt="Initial World Cruise Sign Up Page.">
+								<figcaption class="figure-caption text-left">Figure 8: World Cruise Sign Up Page.</figcaption>
+							</figure>	
+							<p>
+								If the name is valid, we remove the "Add Passenger Name" item from the list and add the passenger's name to the list and show the "No More Passengers" button. We can see this effect in Figure 9 where we have added a passenger with the name Jack. This part of the addPassengers function shows our first example of modifying a web page. Notice the use of the document keyword throughout the JavaScript file. The document refers to the HTML document. Anywhere we see the document keyword, we know we are looking at the elements (or nodes) of the HTML code.
+							</p>
+							<p>
+								We also see the use of the getElementByID keyword. This keyword looks for the HTML element with an id attribute having the same value. We could also look for HTML elements with the getElementByClassName keyword which matches the value of class attributes or the with the getElementByTagNmae keyword which matches on the HTML tag name. These selectors are similar to CSS selectors in that they will find and work on all the elements the function finds. We are only using the getElementByID in our example.
+							</p>
+							<p>
+								The first thing to do is to remove the "Add Passenger Name" list item if it exists. We look for an element with an ID value of NoPassengers. If we find a node with this ID, then we look for the list which is the ul element with the "PassengerList" ID value. The removeChild statement allows us to remove the "Add Passenger Name" list item as this item is a child of the ul node. Think of a family tree. Each family node has 2 parents and 1 or more children. The ul (unordered list) is the parent and the li nodes are the children of the ul element. So, if we want to remove a li element, then we need to remove the child of the ul element. Of course, the ul element is not the only one which can be a parent. There is a parent-child relationship between any set of elements when there are elements inside of other elements. Look at Code 5. Each time you see a set of elements indented together, the set of elements are siblings. The element containing the siblings is the parent.
+							</p>
+							<p>
+								Now that we have deleted the default list item, we need to add the name the user entered to the list. We start by creating an element node named li because we need to add a list item. The createElement statement does the creation. We assign the passenger name to this element by using the innerHTML statement. Finally, we find the list again by using the getElementByID statement, and use the addChild statement to add our new li element.
+							</p>
+							<p>
+								We finish up the addPassengers function by adding 1 to our passenger count, and by showing the "Done Adding Passengers" button. Since we have at least one passenger in the list, it makes sense to show this button. We show the button by changing the style of the element to make the visibility value visible instead of hidden. The style statement allows JavaScript to modify the style of the web page. Figure 9 shows "Jack" in the passenger list and shows the "Done Adding Passengers" button.
+							</p>
+							<figure class="figure">
+								<img class="img-fluid border border-primary rounded-lg"
+								src="./images/cruise4.jpg" alt="Initial World Cruise Sign Up Page.">
+								<figcaption class="figure-caption text-left">Figure 9: World Cruise Sign Up Page.</figcaption>
+							</figure>	
+							<p>
+								Figure 10 shows us what happens after we have added 3 passengers (Jack, Sally, Zero) and clicked the "Done Adding Passengers" button. Clicking this button caused the button and the "Add Passengers" button to become disabled--clicking the buttons is no longer possible. Also, the Payment Due section came into view and indicates 3 passengers signed up for the cruise, the cruise price is $10,000 per passenger resulting in payment due of $30,000. Even though payment is due, the Make Payment button remains disabled. Some user interaction (the credit card number and the check box) is apparently required. We will talk about payment processing in a bit. Right now, we will focus on what happened by clicking the "Done Adding Passengers" button.
+							</p>
+							<p>
+								The HTML code in Code 5 shows the onClick event of the button calls the addingDone function. This function gets the two buttons and sets their disabled attribute to true. Then, the function calls the showPayment method. The showPayment method declares totalDue using let instead of var and assigns the value by multiplying passenger count by cost per passenger. We declare the total variable to form the remaining text of the total due line. JavaScript uses the innerHTML statement to display the passenger count and the total due. Finally, we use the style statement to change the style of the Payment Due section to display on screen.
+							</p>
+							<figure class="figure">
+								<img class="img-fluid border border-primary rounded-lg"
+								src="./images/cruise5.jpg" alt="Initial World Cruise Sign Up Page.">
+								<figcaption class="figure-caption text-left">Figure 10: World Cruise Sign Up Page.</figcaption>
+							</figure>
+							<p>
+								We can see what happens if we do not enter valid payment information in Figure 11. The Accept Terms check box is checked. The credit card number field contains "123" as an entry but has a yellow background and the red "Invalid Credit Card" message is on screen. The Make Payment button is enabled. Code 5 shows we call the termsChecked function when we check the Terms check box. This function finds the check box element and gets the value of its checked attribute. If the checked value is true, the code finds the Make Payments button and removes the disabled attribute from it which makes it available for clicking. A checked value of false puts the disabled attribute back on the "Make Payments" method. 
+							</p>
+							<p>
+								If the user clicks the "Make Payments" button, then the onClick method runs the submitPayment function. This function calls the isValidPayment method which gets the value in the Credit Card Number fields (ID = ccNumber). For simplicity, we say a valid Credit Card Number is 1234. In the real world, we would have code which would validate actual credit card numbers, but this goal is beyond the scope of our current tour. If the entered credit card number is 1234, the method returns true; otherwise, the method returns false.
+							</p>
+							<p>
+								The returned value from isValidPayment determines the next action. I An invalid credit card number shows the "Invalid Credit Card" message and changes the Credit Card Number background color to yellow. The message and the coloring helps the user identify where the problem is.
+							</p>
+							<figure class="figure">
+								<img class="img-fluid border border-primary rounded-lg"
+								src="./images/cruise6.jpg" alt="Initial World Cruise Sign Up Page.">
+								<figcaption class="figure-caption text-left">Figure 11: World Cruise Sign Up Page.</figcaption>
+							</figure>	
+							<p>
+								If the number was valid, we set the Credit Card Number background color back to white in case it was still yellow, hide the invalid credit card message if present, disable the "Make Payments" button and the Terms check box, and show the "Thank You" message. We see this result in Figure 12.
+							</p>
+							<figure class="figure">
+								<img class="img-fluid border border-primary rounded-lg"
+								src="./images/cruise7.jpg" alt="Initial World Cruise Sign Up Page.">
+								<figcaption class="figure-caption text-left">Figure 12: World Cruise Sign Up Page.</figcaption>
+							</figure>
+							<figure class="img-fluid figure">
+							<pre class="border border-primary rounded-lg"><code>
+	&lt;!DOCTYPE html&gt;
+	&lt;html&gt;
+		&lt;head&gt;
+			&lt;meta charset="utf-8"&gt;
+			&lt;title&gt;Cruise Purchase Example&lt;/title&gt;	
+			&lt;script src=".\cruise.js"&gt;&lt;/script&gt;
+			&lt;link rel="stylesheet" href="cruise.css"&gt;
+		&lt;/head&gt;
+		&lt;body&gt;
+			&lt;h1&gt;Around the World Cruise Purchase&lt;/h1&gt;
+			&lt;div id="passengers"&gt;
+				&lt;h2&gt;Passenger List&lt;/h2&gt;
+				&lt;ul id="passengerList"&gt;
+					&lt;li id="NoPassengers"&gt;Enter Passenger Names.&lt;/li&gt;
+				&lt;/ul&gt;
+				&lt;button id="addPass" onClick="addPassenger()"&gt;Add Passenger&lt;/button&gt;
+				&lt;button id="addDone" onClick="addingDone()"&gt;No More Passengers&lt;/button&gt;
+			&lt;/div&gt;
+			&lt;div id="payment"&gt;
+				&lt;h2&gt;Payment Due&lt;/h2&gt;
+				&lt;div id="charges"&gt;
+					&lt;label id="passengerCount"&gt;&lt;/label&gt;
+					&lt;label&gt;@ $10,000 per person&lt;/label&gt;
+					&lt;label id="total"&gt;&lt;/label&gt;
+					&lt;hr/&gt;
+				&lt;/div&gt;
+				&lt;div id="creditCard"&gt;
+					&lt;label&gt;Enter Credit Card Number&lt;/label&gt;
+					&lt;input id="ccNumber" type="text"&gt;&lt;/input&gt;
+					&lt;label id="invalidCC"&gt;Invalid Credit Card Number&lt;/label&gt;
+				&lt;/div&gt;
+				&lt;div&gt;
+					&lt;input type="checkbox" id="yesToTerms" name="terms" onClick="termsChecked()"&gt;
+					&lt;label for="yesToTerms"&gt; I agree to Terms of Services and Payment Terms.&lt;/label&gt;	
+					&lt;hr/&gt;
+				&lt;/div&gt;
+				&lt;button id="makePayment" onClick="submitPayment()"&gt;Make Payment&lt;/button&gt;
+				&lt;br/&gt;
+				&lt;h2 id="thankYou"&gt;Thank you for your payment! Have a great cruise!&lt;/h2&gt;
+				
+			&lt;/div&gt;			
+		&lt;/body&gt;
+	&lt;/html&gt;
+							</code></pre>
+							<figcaption class="figure-caption text-left">Code 5: HTML Code for Cruise Booking Page (cruise.html).</figcaption>
+							</figure>
+							<figure class="img-fluid figure">
+							<pre class="border border-primary rounded-lg"><code>
+	body {
+		margin: 2em;
+		border: 5px solid black;
+	}
+	
+	h1 {
+		padding-left: 1em;
+	}
+	
+	#thankYou {
+		visibility: hidden;
+	}
+
+	#passengers {
+		margin: 2em;
+		border: 5px solid blue;	
+		padding: 1em;
+		width: 15%;
+	}
+
+	#addDone {
+		margin-top: 1em;
+		visibility: hidden;
+	}
+
+	#payment {
+		margin: 2em;
+		border: 5px solid blue;	
+		padding: 1em;
+		width: 20%;
+		display: none;
+	}
+	
+	#invalidCC {
+		visibility: hidden;
+	}
+							</code></pre>
+							<figcaption class="figure-caption text-left">Code 6: CSS Code for Cruise Booking Page (cruise.css).</figcaption>
+							</figure>
+							<figure class="img-fluid figure">
+							<pre class="border border-primary rounded-lg"><code>
+	var passengerCount = 0;
+	
+	function addPassenger() {
+		var name = '';
+		var listNode = document.createElement("li");
+		name = prompt("What is the next passenger's name?", "");
+		
+		if(validateName(name) === false) {
+			return false;
+		} else {
+			var none = document.getElementById("NoPassengers");
+			if (none !== null) {document.getElementById("passengerList").removeChild(none);}
+			listNode.innerHTML = name;
+			passengerCount++;
+			document.getElementById("passengerList").appendChild(listNode);
+			document.getElementById("addDone").style = "visibility:visible";
+			document.getElementById("makePayment").setAttribute("disabled", "true");	
+		}
+	}
+	
+	function validateName(name) {
+		if (name === null) {return false;} else if (name.length < 3) {
+			alert("Passenger name must be at least 3 characters long.");
+			return  false;
+		} else {return true;}
+	}
+	
+	function addingDone() {
+		document.getElementById("addPass").disabled = true;
+		document.getElementById("addDone").disabled = true;	
+		showPayment();	
+	}
+	
+	function showPayment() {
+		let totalDue = passengerCount * 10000;
+		let total = " is $" + totalDue + " Due Now.";
+		document.getElementById("payment").style = "display: block";
+		document.getElementById("passengerCount").innerHTML = passengerCount + " Passengers";
+		document.getElementById("total").innerHTML = total;
+	}
+	
+	function termsChecked() {
+		if (document.getElementById("yesToTerms").checked === true) {
+			document.getElementById("makePayment").removeAttribute("disabled");
+		} else {document.getElementById("makePayment") .setAttribute("disabled", "true");} 
+	}
+	
+	function submitPayment() {
+		if (isValidPayment() === true) {
+			document.getElementById("ccNumber").style = "background:white";
+			document.getElementById("ccNumber").setAttribute("disabled", "true");
+			document.getElementById("yesToTerms").setAttribute("disabled", "true");
+			document.getElementById("makePayment").setAttribute("disabled", "true");
+			document.getElementById("invalidCC").style = "visibility:hidden;color:red;";
+			document.getElementById("thankYou").style = "visibility:visible";
+		} else {
+			document.getElementById("ccNumber").style = "background:yellow";
+			document.getElementById("invalidCC").style = "visibility: visible;color:red;";
+		}
+	}
+	
+	function isValidPayment() {if (document.getElementById("ccNumber").value === "1234") {return true;} else {return false;}}	
+							</code></pre>
+							<figcaption class="figure-caption text-left">Code 7: JavaScript Code for Cruise Booking Page (cruise.js).</figcaption>
+							</figure>							
+							<p>
+								This exercise has showed how JavaScript can bring a web page to life. JavaScirpt allows the user to interact with the web page by providing input, validates the user input, and alerts the user of problems, Further, JavaScript can alter what appears on the web page and can control the styling of the page. We have seen enough in this exercise to appreciate the benefit of JavaScript in web development and to prepare to learn more about it later.
+							</p>
+						</div>
+					</div>
+				</section>							
 
 			<hr/>			
 			<p class="date-modification">
