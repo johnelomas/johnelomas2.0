@@ -360,7 +360,7 @@
 							<pre class="border border-primary rounded-lg"><code>
 	var passengers = ["Jack", "Sally", "Zero"];
 
-	for (var index = 0; index < passengers.length; index++) {	
+	for (var index = 0; index &lt; passengers.length; index++) {	
 		alert(passengers[index]);
 	}
 							</code></pre>
@@ -384,7 +384,7 @@
 								Looking at JavaScript in the browser Console gave us a chance to focus on learning the basics of the language. We learned about data types, setting variables, comparing variable values, and looking at a range of related values. This part of the tour was informative and introduced us to enough of the language so we can learn more about it and other ways of doing some of the same things we have seen. The big question now is how does JavaScript work with a web page. Let's explore this concept.
 							</p>
 							<p>
-								Like how we learned to integrate CSS into a web page during the <a href=".\css.html">CSS Tour</a>, there are 3 ways to integrate JavaScript: inline, internal, in external file. Code 4a is for a basic web page showing how to use each method, and Code 4b shows the related external JavaScript code. Figure 5 shows the web page and the result of clicking the Internal button.
+								Like how we learned to integrate CSS into a web page during the <a href="./css.html">CSS Tour</a>, there are 3 ways to integrate JavaScript: inline, internal, in external file. Code 4a is for a basic web page showing how to use each method, and Code 4b shows the related external JavaScript code. Figure 5 shows the web page and the result of clicking the Internal button.
 							</p>
 							<p>
 								Code 4a shows 3 buttons and each button has an onClick attribute. The onClick attribute means the onClick event and defines what should happen on the event of the user clicking the button. Events describe user interactions such as pressing a key, changing an entry in a text box, picking an item from a list of items, checking a check box, and many more. We must provide an action to perform when clicking the button. This action is the JavaScript code.
@@ -655,7 +655,7 @@
 	}
 	
 	function validateName(name) {
-		if (name === null) {return false;} else if (name.length < 3) {
+		if (name === null) {return false;} else if (name.length &lt; 3) {
 			alert("Passenger name must be at least 3 characters long.");
 			return  false;
 		} else {return true;}
@@ -705,7 +705,8 @@
 						</div>
 					</div>
 				</section>							
-
+			</article>
+			<section id="bottom"></section>
 			<hr/>			
 			<p class="date-modification">
 				Created: 11 February 2020.
